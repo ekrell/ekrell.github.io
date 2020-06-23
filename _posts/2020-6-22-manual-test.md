@@ -34,7 +34,7 @@ The work I have done in energy-efficient path planning can be put to the test.
 
 ![EMILY heading out](images/20200622_headout.jpg)
 
-## Issues
+### Issues
 
 While the EMILY was quite easy to control and there were no issues with the Pixhawk disconnecting,
 there were issues with maintaining RC control over the EMILY.
@@ -61,3 +61,10 @@ Perhaps in-field calibration will help. Somehow, this will need to be taken care
 
 Given the issues with maintaining control, I did not attempt autonomous waypoint control.
 Hopefully I can resolve these issues quickly so that I can focus on autonomy. 
+
+### Post-mission
+
+The marine tether is always a hassle to clean. 
+Since I only used a fraction of it, I did not want to wind it up and have to unwind all of it since all would then be exposed to saltwater.
+So I had only the length of rope used wound up and placed in a bag.
+Somehow it emerged from the bag as a rat's nest that took always two hours to untangle in my back yard. 
