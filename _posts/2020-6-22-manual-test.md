@@ -4,7 +4,7 @@ title: Manual RC EMILY field test
 categories: emily, field, laguna madre
 ---
 
-![Laguna Madre test site](images/20200622_speed.jpg)
+![EMILY operational](images/20200622_speed.jpg)
 
 ### Overview
 
@@ -28,11 +28,11 @@ Typically I intend to cruise along slowly with the EMILY for data collection tas
 but turning requires more throttle that I expected to combat the current. 
 The work I have done in energy-efficient path planning can be put to the test. 
 
-![Laguna Madre test site](images/20200622_shore.jpg)
+![EMILY on the shore](images/20200622_shore.jpg)
 
-![Laguna Madre test site](images/20200622_launch.jpg)
+![EMILY launching](images/20200622_launch.jpg)
 
-![Laguna Madre test site](images/20200622_headout.jpg)
+![EMILY heading out](images/20200622_headout.jpg)
 
 ## Issues
 
@@ -48,15 +48,16 @@ Clearly this radio range is insufficient for any meaningful applications.
 Users report >1000 feet with this telemetry setup (for drones).
 Need to look into extending this. 
 
-![Laguna Madre test site](images/20200622_retrieve.jpg)
+![Manual retrieval when leaving the ](images/20200622_retrieve.jpg)
 
 Second, after a minute or two of controlling, the GCS would report high EKF error and automatically switch to hold mode.
 When this occurred, I was required to wait a bit before I could re-arm and regain RC control. 
 This seemed to occur mainly when increasing the throttle.
 The boat's bow would rise considerably and perhaps the substantial pitching affected it. 
+Was always able to regain control, so it does not seem to be related to radio range.
 Perhaps in-field calibration will help. Somehow, this will need to be taken care of for reliable use. 
 
-![Laguna Madre test site](images/20200622_rf.jpg)
+![Tripod-mounted telemetry](images/20200622_rf.jpg)
 
 Given the issues with maintaining control, I did not attempt autonomous waypoint control.
 Hopefully I can resolve these issues quickly so that I can focus on autonomy. 
