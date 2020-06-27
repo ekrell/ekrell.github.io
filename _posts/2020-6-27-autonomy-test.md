@@ -11,7 +11,7 @@ This morning, I took the EMILY out for another test in the Laguna Madre (27Â°38â
 
 The autopilot worked right away. It was able to head toward a waypoint as well as perform a return to launch (RTL) when requested. However, I need to do some parameter tuning for better control. The EMILY does not turn as smoothly as, say, a typical rover. So rather than go straight toward a waypoint, it keeps overshooting and oscillating on its path.
 
-[EMILY autopilot video](https://www.youtube.com/watch?v=uAws3_yPzGU)
+[EMILY autopilot video](https://youtu.be/yPgwaBPV9Zg)
 
 ### Issues
 
