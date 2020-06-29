@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Setting up additional ArduRover features for EMILY
