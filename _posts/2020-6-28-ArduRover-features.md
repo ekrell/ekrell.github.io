@@ -30,7 +30,7 @@ Create two channel mixes:
 
 Channel mix 1: 
 
-![Channel mix one]images/20200628_2.jpg)
+![Channel mix one](images/20200628_2.jpg)
 
 Channel mix 2:
 
