@@ -16,7 +16,7 @@ On the first field trial, I realized that I had to turn left for right steering 
 
 `Function List` → `Control Setup` → `Reverse` → Flip the direction on `ROL` and `YAW`. 
 
-![Reversing the roll and yaw](images/  )
+![Reversing the roll and yaw](images/20200628_4.jpg)
 
 #### Setup switching between 6 flight modes with transmitter
 
@@ -26,15 +26,15 @@ Basically, you use channel mixing which allows one channel to control another. S
 
 Create two channel mixes:
 
-![Create two channel mixes](images/    )
+![Create two channel mixes](images/20200628_3.jpg)
 
 Channel mix 1: 
 
-![Channel mix one](images/    )
+![Channel mix one]images/20200628_2.jpg)
 
 Channel mix 2:
 
-![Channel mix one](images/    )
+![Channel mix one](images/20200628_1.jpg)
 
 ArduRover setup:
 
