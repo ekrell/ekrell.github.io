@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Setting up additional ArduRover features for EMILY
+title: Setting up ArduRover features for EMILY
 categories: emily, lab
 ---
 
@@ -16,7 +16,7 @@ On the first field trial, I realized that I had to turn left for right steering 
 
 `Function List` → `Control Setup` → `Reverse` → Flip the direction on `ROL` and `YAW`. 
 
-![Reversing the roll and yaw](images/20200628_fmodes.png)
+![Reversing the roll and yaw](images/  )
 
 #### Setup switching between 6 flight modes with transmitter
 
@@ -34,7 +34,7 @@ Channel mix 2:
 ![Channel mix one](images/    )
 
 ArduRover setup:
-![ArduRover flight modes setup](images/    )
+![ArduRover flight modes setup](images/20200628_fmodes.png)
 
 #### Gamepad setup
 
