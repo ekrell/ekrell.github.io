@@ -25,15 +25,19 @@ ArduPilot allows you to associate switch positions on the transmitter with fligh
 Basically, you use channel mixing which allows one channel to control another. So, you setup the GEAR stick (switch A) to behave differently (output different signals) depending on the Flight Mode stick position (switch B). 
 
 Create two channel mixes:
+
 ![Create two channel mixes](images/    )
 
 Channel mix 1: 
+
 ![Channel mix one](images/    )
 
 Channel mix 2:
+
 ![Channel mix one](images/    )
 
 ArduRover setup:
+
 ![ArduRover flight modes setup](images/20200628_fmodes.png)
 
 #### Gamepad setup
