@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Solved: EKF variance failsafe
+title: Solved -- EKF variance failsafe
 categories: emily, lab
 ---
 
