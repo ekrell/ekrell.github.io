@@ -24,6 +24,6 @@ Quick field test auto mission. The green line shows the boat turn toward the way
 
 ![Waypoint mission ](images/20200630-2.png)
 
-Also, I temporarily ran into another issue. So far, I had disabled all pre-arm checks. I believe this was done by CRASAR as well. I thought I might be missing important feedback so I enabled them. However, it would not arm if I turned on the Pixhawk while it was in the water. The error was “gyros not calibrated”. I found a discussion where another user had the same experience with an underwater vehicle. Basically, on boot a check is performed that assumes the vehicle is still. This is never the case for a marine robot, so that particular pre-arm check should be disabled for a boat. 
+Also, I temporarily ran into another issue. So far, I had disabled all pre-arm checks. I believe this was done by CRASAR as well. I thought I might be missing important feedback so I enabled them. However, it would not arm if I turned on the Pixhawk while it was in the water. The error was “gyros not calibrated”. I found a [discussion](https://discuss.bluerobotics.com/t/gyro-not-calibrated-warning-loss-of-control/1179/8) where another user had the same experience with an underwater vehicle. Basically, on boot a check is performed that assumes the vehicle is still. This is never the case for a marine robot, so that particular pre-arm check should be disabled for a boat. 
 
 ![Gyro not calibrated](images/20200630-3.png)
