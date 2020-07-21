@@ -18,12 +18,12 @@ So, I used zip-ties and jammed them tightly in the case. At this stage, I don’
 
 Calibration results:
 
-![Calibration results](images/20200630-1.png)
+![Calibration results](../images/20200630-1.png)
 
 Quick field test auto mission. The green line shows the boat turn toward the waypoint, reach it, then drift for a few minutes with the current since I was not in a loiter mode. I kept the waypoint mission extremely simple since I was only interested in the EKF variance issue. I still need to tune the controller for better navigation with more complex waypoints. 
 
-![Waypoint mission ](images/20200630-2.png)
+![Waypoint mission ](../images/20200630-2.png)
 
 Also, I temporarily ran into another issue. So far, I had disabled all pre-arm checks. I believe this was done by CRASAR as well. I thought I might be missing important feedback so I enabled them. However, it would not arm if I turned on the Pixhawk while it was in the water. The error was “gyros not calibrated”. I found a [discussion](https://discuss.bluerobotics.com/t/gyro-not-calibrated-warning-loss-of-control/1179/8) where another user had the same experience with an underwater vehicle. Basically, on boot a check is performed that assumes the vehicle is still. This is never the case for a marine robot, so that particular pre-arm check should be disabled for a boat. 
 
-![Gyro not calibrated](images/20200630-3.png)
+![Gyro not calibrated](../images/20200630-3.png)
