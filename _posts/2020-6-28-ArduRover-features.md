@@ -16,7 +16,7 @@ On the first field trial, I realized that I had to turn left for right steering 
 
 `Function List` → `Control Setup` → `Reverse` → Flip the direction on `ROL` and `YAW`. 
 
-![Reversing the roll and yaw](images/20200628_4.jpg)
+![Reversing the roll and yaw](../images/20200628_4.jpg)
 
 #### Setup switching between 6 flight modes with transmitter
 
@@ -26,25 +26,25 @@ Basically, you use channel mixing which allows one channel to control another. S
 
 Create two channel mixes:
 
-![Create two channel mixes](images/20200628_3.jpg)
+![Create two channel mixes](../images/20200628_3.jpg)
 
 Channel mix 1: 
 
-![Channel mix one](images/20200628_2.jpg)
+![Channel mix one](../images/20200628_2.jpg)
 
 Channel mix 2:
 
-![Channel mix one](images/20200628_1.jpg)
+![Channel mix one](../images/20200628_1.jpg)
 
 ArduRover setup:
 
-![ArduRover flight modes setup](images/20200628_fmodes.png)
+![ArduRover flight modes setup](../images/20200628_fmodes.png)
 
 #### Gamepad setup
 
 I can also control the vehicle with a gamepad (Logitech Dual Action) using ArduRover’s joystick support. I previously thought this was not supported with ArduRover since I did not see the Joystick options. I learned later that the gamepad must be connected before launching QGroundControl. Once I did that, it was easy to set it up. The main thing to consider is that the idle position of the gamepad’s analogue sticks is center not down. So I had to set an option to indicate that the center position is zero throttle. 
 
-![ArduRover gamepad setup](images/gamepad.png)
+![ArduRover gamepad setup](../images/gamepad.png)
 
 It is good to have an alternative to a radio controller for manual control. I am currently experiencing very limited range with both the radio dongles (GCS) and the Spektrum remote satellite receiver. However, increasing the GCS range should be easily done with the long-range radios that I expect to purchase. Since the joystick is via the GCS, I can get long-range manual control. 
 
