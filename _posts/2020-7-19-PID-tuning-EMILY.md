@@ -13,9 +13,9 @@ Previously, I have reported that the waypoint following (AUTO mode) has been unu
 
 Today’s launch was just a few feet away from my [usual site](https://ekrell.github.io/autonomy-test/), a popular kayak launch spot. So popular today that I had to move to a slightly less convenient location. I found that, due to the limited RF range that I previously mentioned, I could not operate from the vehicle; the GCS (laptop + tripod with radio dongle) was out on the sand. Perhaps I should bring a beach chair. 
 
-![GCS](images/20200719_3.JPG)
+![GCS](../images/20200719_3.JPG)
 
-![GCS](images/20200719_5.JPG)
+![GCS](../images/20200719_5.JPG)
 
 ### PID Tuning
 
@@ -23,18 +23,18 @@ I have experience with path-planning, computer vision, etc, but my algorithms ar
 
 First, here is an initial attempt to follow waypoints before tuning:
 
-![Map with poor waypoint following](images/20200719_A.png)
+![Map with poor waypoint following](../images/20200719_A.png)
 
 I did several trials, tuning the FF (Steering control feed forward gain), and P values as described in the [ArduRover documentation](https://ardupilot.org/rover/docs/rover-tuning-steering-rate.html). It actually took six trials to achieve a reasonable behavior, but it took a long time because of the complexity of running these trials. In short, the boat goes to waypoint 1 (hopefully), then looses radio connection while en route to waypoint two. I have it set for a return-to-launch on connection loss, but this relies on having a good controller setup... So I hope it gets closer (sometimes it goes the opposite way), before setting it to hold mode so that I can drag it in closer by the tether. After about an hour where the waypoint following was getting significantly worse, I put in the magic FF value  (1.0) and it started tracking perfectly. 
 
-![Map with exploring PID values](images/20200719_B.png)
+![Map with exploring PID values](../images/20200719_B.png)
 
 I pulled it back in and did another test to verify that my observations were no mere fluke. 
 
-![Map with good waypoint following](images/20200719_C.png)
+![Map with good waypoint following](../images/20200719_C.png)
 
 ### Tethers
 
 I need reliable, longer range communications so that I can get away from tethers. Eventually, the long-term autonomous missions I envision cannot be tethered. But currently, if I lose communication (between 200 – 300 ft), I can either hold or return-to-launch. The former requires someone (me) to go out and retrieve the vessel and the later is dangerous since there are frequently fishermen and beachcombers in the vicinity. 
 
-![Tether](images/20200719_2.JPG)
+![Tether](../images/20200719_2.JPG)
