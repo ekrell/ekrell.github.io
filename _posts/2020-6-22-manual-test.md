@@ -14,7 +14,7 @@ A few steps were needed to get the vehicle ready.
 So this test is merely to see if the EMILY is sufficiently operational given the preparations I made.
 A tether was attached to the EMILY so that it could not escape if connection was lost. 
 
-![Laguna Madre test site](images/20200622_site.jpg)
+![Laguna Madre test site](../images/20200622_site.jpg)
 
 [EMILY control video](https://www.youtube.com/watch?v=uAws3_yPzGU)
 
@@ -28,11 +28,11 @@ Typically I intend to cruise along slowly with the EMILY for data collection tas
 but turning requires more throttle that I expected to combat the current. 
 The work I have done in energy-efficient path planning can be put to the test. 
 
-![EMILY on the shore](images/20200622_shore.jpg)
+![EMILY on the shore](../images/20200622_shore.jpg)
 
-![EMILY launching](images/20200622_launch.jpg)
+![EMILY launching](../images/20200622_launch.jpg)
 
-![EMILY heading out](images/20200622_headout.jpg)
+![EMILY heading out](../images/20200622_headout.jpg)
 
 ### Issues
 
@@ -48,7 +48,7 @@ Clearly this radio range is insufficient for any meaningful applications.
 Users report >1000 feet with this telemetry setup (for drones).
 Need to look into extending this. 
 
-![Manual retrieval when leaving the ](images/20200622_retrieve.jpg)
+![Manual retrieval when leaving the ](../images/20200622_retrieve.jpg)
 
 Second, after a minute or two of controlling, the GCS would report high EKF error and automatically switch to hold mode.
 When this occurred, I was required to wait a bit before I could re-arm and regain RC control. 
@@ -57,7 +57,7 @@ The boat's bow would rise considerably and perhaps the substantial pitching affe
 Was always able to regain control, so it does not seem to be related to radio range.
 Perhaps in-field calibration will help. Somehow, this will need to be taken care of for reliable use. 
 
-![Tripod-mounted telemetry](images/20200622_rf.jpg)
+![Tripod-mounted telemetry](../images/20200622_rf.jpg)
 
 Given the issues with maintaining control, I did not attempt autonomous waypoint control.
 Hopefully I can resolve these issues quickly so that I can focus on autonomy. 
