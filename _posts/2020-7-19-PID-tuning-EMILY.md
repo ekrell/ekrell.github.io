@@ -7,7 +7,7 @@ categories: emily, field, laguna madre
 
 Previously, I have reported that the waypoint following (AUTO mode) has been unusable because of extreme oscillations along the path. Today, I tuned the PID values by running several trials in the Laguna Madre. While I could fine-tune it further, the waypoint following is now quite reasonable. 
 
-![EMILY out on the water](images/20200719_1.JPG)
+![EMILY out on the water](../images/20200719_1.JPG)
 
 ### Setting up
 
