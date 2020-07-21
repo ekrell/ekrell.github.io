@@ -3,7 +3,7 @@ layout: post
 title: Autonomous waypoint following EMILY field test
 categories: emily, field, laguna madre, autopilot
 ---
-![Laguna Madre test site](images/20200627_1.JPG)
+![Laguna Madre test site](../images/20200627_1.JPG)
 
 ### Overview
 
@@ -17,6 +17,6 @@ The autopilot worked right away. It was able to head toward a waypoint as well a
 
 I am still limited by the low communication range. At ~300 feet, I lose both RC control and RF to the ground control laptop. I have the RF dongle on a tripod, but the range is significantly less than the advertised ~300 meters. Typically, around ~280 feet, I hear `Error Failsafe 0x1` which indicates RC loss. It automatically switches to a _hold_ mode and drifts for a bit. After a few seconds, the GCS communication is lost. Potential fixes for GCS communication include using the lab’s taller tripod or buying the long-range radios. For the Spektrum RC, I am using the Satellite receiver. There is also the Futuba RC that comes with the EMILY, though I’m not sure it has the channels needed for Pixhawk. I expect it has sufficiently long range since it was intended for the EMILY. Once connection is lost, I have to manually retrieve the EMILY, at least until it is within range again. 
 
-![Control](images/20200627_2.JPG)
+![Control](../images/20200627_2.JPG)
 
-![Control](images/20200627_3.JPG)
+![Control](../images/20200627_3.JPG)
