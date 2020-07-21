@@ -8,7 +8,7 @@ categories: emily, lab
 
 There is an [EMILY ERS](https://www.emilyrobot.com/) robot on loan to Texas A&M University - Corpus Christi (TAMUCC) by A&M College Station's [CRASAR](http://crasar.org/). This EMILY is called a Smart-EMILY, having been modified to support autonomous waypoint navigation. The CRASAR team outfitted the vehicle with a [Pixhawk Mini](https://docs.px4.io/v1.9.0/en/flight_controller/pixhawk_mini.html). I intend to get the EMILY going again, and using it for my project where a surface vehicle acts an an autonomous exploring, generating its own data collection missions based on onboard data analysis. The first steps are to make sure I can control it with remote control and with autonomous waypoint following.
 
-![EMILY ERS](images/emily_desk.png)
+![EMILY ERS](../images/emily_desk.png)
 
 ### Setup
 
