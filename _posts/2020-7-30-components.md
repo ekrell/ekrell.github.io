@@ -6,7 +6,7 @@ categories: emily, hardware
 
 ## Overview
 
-Now that the vehicle is controlling quite nicely after tuning, I am turning my attention to the long-range missions that we have in mind. Currently, the boat’s RF range is ~200 ft with a pair of [SiK Telemetry Radios](https://ardupilot.org/copter/docs/common-sik-telemetry-radio.html). Initially, we are interested in missions in Corpus Christi Bay, Oso Bay, Sunset Lake, the Laguna Madre, and the many other bodies of water in the Coastal Bend. Increasing communication range is of primary concern. 
+Now that the vehicle is [controlling quite nicely after tuning](https://ekrell.github.io/PID-tuning-EMILY/), I am turning my attention to the long-range missions that we have in mind. Currently, the boat’s RF range is ~200 ft with a pair of [SiK Telemetry Radios](https://ardupilot.org/copter/docs/common-sik-telemetry-radio.html). Initially, we are interested in missions in Corpus Christi Bay, Oso Bay, Sunset Lake, the Laguna Madre, and the many other bodies of water in the Coastal Bend. Increasing communication range is of primary concern. 
 
 While not as immediately critical, high accuracy GPS would allow us to produce more useful data products as well as improve navigation. I am especially interested in direct georeferencing so that data can be directly used to drive mission planning while onboard.
 
