@@ -9,6 +9,8 @@ Previously, I have reported that the waypoint following (AUTO mode) has been unu
 
 ![EMILY out on the water](../images/20200719_1.JPG)
 
+[Emily Ardurover parameters file, after PID tuning.](https://github.com/ekrell/emily-usv/commit/5ce96a17d08cac04ba79dfdfb0b4b528ed6315b8#diff-ee26e64c361a802879b2499ad32cece4)
+
 ### Setting up
 
 Today’s launch was just a few feet away from my [usual site](https://ekrell.github.io/autonomy-test/), a popular kayak launch spot. So popular today that I had to move to a slightly less convenient location. I found that, due to the limited RF range that I previously mentioned, I could not operate from the vehicle; the GCS (laptop + tripod with radio dongle) was out on the sand. Perhaps I should bring a beach chair. 
