@@ -14,11 +14,11 @@ Various factors complicated the mission, and it was difficult to investigate the
 
 I first tried here because my dad had noticed that the usual spot for EMILY testing, also one of our favourite kayak launch spots, had been quite crowded lately. There is only one really good spot there for launching and keeping the tether out of vegetation. So, I tried along the Causeway, where there is a sparsely-populated, long stretch of access to the Laguna Madre. Since the goal was to test RTL, I created a sequence of waypoints that would cause the boat to go away from the shore. 
 
-![Begin Auto mission](../images/20200803-1.png)
+![Begin Auto mission](../images/20200803_1.png)
 
 EMILY reached waypoint 3 without issue, then almost immediately lost connection. I was expecting it to initiate RTL, the set failsafe action. However, the boat did nothing. I was surprised since previously a communication loss prompted RTL. 
 
-![Communication lost](../images/20200803-2.png)
+![Communication lost](../images/20200803_2.png)
 
 The reason I was testing RTL was not to check if it would enter that mode, but because previous RTL behavior was observed before [PID tuning](https://ekrell.github.io/PID-tuning-EMILY/). I wanted to verify that with PID tuning, the RTL would perform properly. Manually forcing it to RTL was also acting weird. I would pull on the tether to get in in range to manually enter the mode. The boat would enter the mode without any errors, but was immobile. I eventually had to drag it to shore by the tether, occasionally testing RTL. I realized the problem which I switched to manual to drive the boat to shore. I could see a second of throttle then it would stop; the water was so shallow that the boat was actually stuck. I gave up at this site. 
 
@@ -26,7 +26,7 @@ The reason I was testing RTL was not to check if it would enter that mode, but b
 
 Next I went to the parking lot that juts out into the lagoon, where all previously reported EMILY field tests have taken place. Here, I was having extreme communication errors, unable to maintain a steady connection even when the boat was only ~12 ft away. It was hard to get anything accomplished in such conditions. I was only able to manually drive the boat out for a few feet to test loiter mode. The water conditions were unusually calm and the current had almost no effect on the vehicle. So I pulled it in various directions by the tether. Each time, it would exit its loiter radius and reposition. While not a prolonged test, it suggests that loiter is working fine. 
 
-![Loiter mode](../images/20200803-3.png)
+![Loiter mode](../images/20200803_3.png)
 
 However, attempts to test RTL were always met with telemetry communication issues. Also, the telemetry issues take far too long to recover from. Usually on regaining a connection, the log mentions “Initialing APM” several times, and it usually undergoes a tedious sequence of “EFK error”, “EKF failsafe”, and “EKF failsafe cleared” that can take over 30 seconds. I am determined to put all further EMILY testing on hold until I have installed the long-range telemetry pair. 
 
