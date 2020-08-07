@@ -16,7 +16,7 @@ Some time go, CRASAR needed their long-range radios ([similar model](http://stor
 
 While testing the radio, I noticed that the Pixhawk was often rebooting. Inspecting, I found that any slight movement of a wire into the Pelican case caused it to loose power for a moment. I repaired the loose connection. It seems to be maintaining a steady connection even when I jostle the boat around during compass calibration. 
 
-The firmware on the EMILY's pixhawk mini was out of date, no longer supported by the most recent [QGroundControl](http://qgroundcontrol.com/). Choices were either to use an old QGroundControl or update the firmware. I opted for updating the firmware. First I tried the latex PX4 with a rover frame. I was unable to bind the Spektrum Satellite or get any RC working. Then I tried ArduRover firmware (in Boat mode), which was working as expected right away.
+The firmware on the EMILY's pixhawk mini was out of date, no longer supported by the most recent [QGroundControl](http://qgroundcontrol.com/). Choices were either to use an old QGroundControl or update the firmware. I opted for updating the firmware. First I tried the latest PX4 with a rover frame. I was unable to bind the Spektrum Satellite or get any RC working. Then I tried ArduRover firmware (in Boat mode), which was working as expected right away.
 
 The final issue I had is a bit of an embarrassment. Steering was working perfectly but only a slight noise and no action occurred with the throttle. After a significant amount of time checking connections, Pixhawk and RC settings.. I finally found that the motor for throttle has two connections and one was unplugged. 
 
