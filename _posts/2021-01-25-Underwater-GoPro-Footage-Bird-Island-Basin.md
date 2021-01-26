@@ -5,7 +5,6 @@ category: GoPro, field, laguna madre
 ---
 
 ![Bird Island Basin](../images/birdIslandBasin.jpeg)
-Bird Island Basin, Padre Island
 
 ### Lab Work
 
@@ -38,6 +37,11 @@ But [Alexis Guijarro has proposed some ideas](https://twitter.com/krell_evan/sta
 For a quick trial run, I took the mount out to Bird Island Basin, Padre Island to record some footage. 
 I have seagrass videos recorded a few years ago, but I was interested in the location for future field trials. 
 The nice thing about the basin is that it is fairly shallow for a long time and there are plenty of grasses, rocks, etc to film. 
+I had the camera mount tied to a bodyboard, just in case I accidently drop it. 
+
+Not very autonomous data collection: 
+
+![Me collecting data](../images/P1000467_small.JPG)
 
 I recorded three videos that feature footage extremely close to shore (ankle deep) to further out (waist deep). 
 The deeper footage (most of video 3) is extremely hazy, just able to differentiate sand and grass based on color. 
