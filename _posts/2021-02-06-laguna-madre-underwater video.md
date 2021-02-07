@@ -40,11 +40,17 @@ I usually rely on zip ties, but the sheer sides don't offer attachment points. N
 
 Drifting along the flats was easy, but getting back into the channel took effort. 
 Without the trolling motor, my dad and I used poles to manually push ourselves out while fighting against the current. 
+We would have collected a lot more data if the trolling motor were operational.
 After that bit of adventuring, I cooked chili while waiting for my invitation from the [Explorer's Club](https://www.explorers.org/). 
 
 ![Chili](../images/2021-2-5_chili.JPG)
 ![Mini Whirlpool](../images/2021-2-5_whirlpool.JPG)
 
 ## Videos
+
+Back at home, I can actually see the videos in detail. 
+The good is that I can make out bottom detail. There is sand, small white shells, and grass clumps.
+Unfortunately, the current was strong enough to cause the boat to speed along to quickly. 
+I did not feel too fast on deck, but when the camera is inches from the bottom the vehicle needs to move very slowly to avoid motion blur. 
 
 (Uploading to Youtube.. will post in a moment)
