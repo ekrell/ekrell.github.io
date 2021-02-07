@@ -5,12 +5,12 @@ category: GoPro, field, laguna madre
 ---
 
 The transition from [wading](https://ekrell.github.io/Underwater-GoPro-Footage-Bird-Island-Basin/) 
-to boating for data collection is an upgrade, even if the boat it not quite autonomous. 
+to boating for data collection is an upgrade, even if the boat is not autonomous. 
 Again, I am using a GoPro to record seafloor-facing underwater footage in the shallows. 
 This data will be used to (1) generate a mosaic to place in a simulator for testing autonomous data-driven behaviors 
 and (2) develop ML models for classification, clustering, and novelty detection. 
 
-This mission was actually a combined fishing trip with my parents in their boat and some data collection. 
+This mission was actually a combined fishing and data collection trip with my parents in their boat. 
 Eventually I will conduct rigorous surveys in one or more regions to collect the data for the mosaic. 
 For now, I am still getting a sense of the data quality that can be achieved despite the significant turbidity that characterizes the local waters.
 Also, accessible shallow water sites with a variety of substrate characteristics are being noted for future missions. 
@@ -48,9 +48,9 @@ After that bit of adventuring, I cooked chili while waiting for my invitation fr
 
 ## Videos
 
-Back at home, I can actually see the videos in detail. 
 The good is that I can make out bottom detail. There is sand, small white shells, and grass clumps.
 Unfortunately, the current was strong enough to cause the boat to speed along to quickly. 
 I did not feel too fast on deck, but when the camera is inches from the bottom the vehicle needs to move very slowly to avoid motion blur. 
+Blurred, the white shells still stick out against the sand background. But the seagrass clumps tend to blend it, making a green smudge. 
 
 [Video](https://youtu.be/zUO7_6WC1Bc)
