@@ -17,7 +17,8 @@ Also, accessible shallow water sites with a variety of substrate characteristics
 Launching from Bluff Bay Marina, we spent some time around the Humble Channel, Packery Channel and Intercoastal Waterway (ICW). 
 A very pleasant day on the water, being quite chilly and with substantial fog. 
 
-![](../images/2021-2-5_boat.JPG) ![](../images/2021-2-5_fog.JPG)
+![Boat](../images/2021-2-5_boat.JPG) 
+![Fog](../images/2021-2-5_fog.JPG)
 
 
 Along the ICW, the lagoon has numerous islands and flats. The channel is flanked by extreme shallows that are best navigated with a trolling motor.
@@ -28,21 +29,21 @@ I have not had success with streaming the GoPro over to my phone via WiFi if the
 so I have to manually check the recordings periodically to monitor. 
 Of course the autonomous system will be integrated with a companion computer. 
 
-![](../images/2021-2-5_ICW.JPG)
-![](../images/2021-2-5_ICW17.JPG)
+![ICW](../images/2021-2-5_ICW.JPG)
+![ICW marker 17](../images/2021-2-5_ICW17.JPG)
 
 To record, I simply held the DIY camera mount against the side of the boat. Any ideas for attaching the camera without modifying the hull?
 I usually rely on zip ties, but the sheer sides don't offer attachment points. Not my most dignified pose. 
 
-![](../images/2021-2-5_methodFar.JPG)
-![](../images/2021-2-5_methodNear.JPG)
+![Holding the camera, far](../images/2021-2-5_methodFar.JPG)
+![Holding the camera, near](../images/2021-2-5_methodNear.JPG)
 
 Drifting along the flats was easy, but getting back into the channel took effort. 
 Without the trolling motor, my dad and I used poles to manually push ourselves out while fighting against the current. 
 After that bit of adventuring, I cooked chili while waiting for my invitation from the [Explorer's Club](https://www.explorers.org/). 
 
-![](../images/2021-2-5_whirlpool.JPG)
-![](../images/2021-2-5_chili.JPG)
+![Chili](../images/2021-2-5_chili.JPG)
+![Mini Whirlpool](../images/2021-2-5_whirlpool.JPG)
 
 ## Videos
 
