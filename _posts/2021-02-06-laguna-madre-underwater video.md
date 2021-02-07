@@ -53,4 +53,4 @@ The good is that I can make out bottom detail. There is sand, small white shells
 Unfortunately, the current was strong enough to cause the boat to speed along to quickly. 
 I did not feel too fast on deck, but when the camera is inches from the bottom the vehicle needs to move very slowly to avoid motion blur. 
 
-(Uploading to Youtube.. will post in a moment)
+[Video](https://youtu.be/zUO7_6WC1Bc)
