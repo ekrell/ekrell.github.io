@@ -18,7 +18,7 @@ The purpose of this blog is to record updates on my research to enable data-driv
 
 [Github](https://github.com/ekrell)
 
-[ResearchGate](https://www.researchgate.net/)
+[ResearchGate](https://www.researchgate.net/profile/Evan-Krell)
 
 [Google Scholar](https://scholar.google.com/citations?user=jLuwYGAAAAAJ&hl=en&oi=ao)
 
