@@ -43,7 +43,7 @@ Using an onboard computer, the EMILY needs to process the underwater stream to m
 The GoPro Hero 4 excels at obtaining cost-effective underwater imagery, but is not the ideal choice for delivering the footage to a computer.
 The choices are either WiFi or HDMI capture card and waterproofed connection to the camera ([costly](https://www.diveandsee.com/products/monitors-and-gopro/gopro-hero-7-underwater-housing-wifi-remote-control-capability-%20hdmi-live-streaming-video-cable-led-video-light)). 
 
-WiFi does not generally effective underwater. In my trials, the connection is lost almost instantly on submersion. 
+WiFi is not generally effective underwater. In my trials, the connection is lost almost instantly on submersion. 
 However, I found [this extremely cheap technique](https://www.paulillsley.com/GoPro_Underwater_Wi-Fi_Cable_Setup/) by Paul Illsley to deliver the WiFi signal directly from the camera to the onboard computer
 using an RF cable. 
 
@@ -65,7 +65,7 @@ Once the RF cable arrived, I used the underwater WiFi trick and `ros-gopro-drive
 The GoPro Hero 4 stream is a bit blurry, but it only needs to be sufficient for onboard scene understanding. 
 The camera can stream and simultaneously record to its SD card at the specified resolution. 
 In the following video, the left recording is what was streamed to the laptop and the right is the 1080 res video recorded by the camera.
-The difference between the two is more subtle that I expected. 
+The difference between the two is more subtle than I expected. 
 
 [Video comparison of streamed and recorded underwater footage](https://www.youtube.com/watch?v=3a1oJquOUrk)
 
@@ -75,8 +75,8 @@ With the pool success, I wanted to ensure that I could maintain a fairly long-te
 Since the trolling motor has not been repaired, I did not collect useful data. But I streamed the GoPro to my laptop for almost half an hour
 with no connection interruptions. Latency was stable (< second delay), and the laptop showed a continuous strong WiFi signal.
 Having seen that the GoPro footage should be useful (but challenging) for computer vision and that the stream can reliably be 
-delivered to an onboard computer, I intend to setup a Raspberry Pi or Odroid stream processing platform that I can deploy on the EMILY eventually, 
-but within a week or so on a kayak for initial trials and data collection. 
+delivered to an onboard computer, I intend to setup a Raspberry Pi or Odroid stream processing platform that I can deploy on the EMILY (eventually), 
+and within a week or so on a kayak for initial trials and data collection. 
 
 I am not sharing the lengthy recording since it almost entirely a green haze, but the following are photos from the outing. 
 
@@ -100,6 +100,6 @@ Casualties of the Texas freeze:
 
 ![Several dead fish](../images/GOPR0206_e.JPG)
 
-![Dead cowfish](../images/.JPG)
+![Dead cowfish](../images/GO130213.JPG)
 
 And finally, a [video of a very simple scrambled eggs lunch](https://studio.youtube.com/video/LCfQwRSKnEo/edit).
