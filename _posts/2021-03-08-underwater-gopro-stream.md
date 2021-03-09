@@ -100,6 +100,6 @@ Casualties of the Texas freeze:
 
 ![Several dead fish](../images/GOPR0206_e.JPG)
 
-![Dead cowfish](../images/GO130213_e.JPG)
+![Dead cowfish](../images/G0130213_e.JPG)
 
 And finally, a [video of a very simple scrambled eggs lunch](https://www.youtube.com/watch?v=LCfQwRSKnEo).
