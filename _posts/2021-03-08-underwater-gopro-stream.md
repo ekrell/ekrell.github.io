@@ -25,8 +25,8 @@ Because of these reliability issues, I have been hesitant to perform any untethe
 Ultimately, the goal is to have an autonomous explorer using onboard sensing and processing for opportunistic, adaptive missions. 
 But that cannot happen as long as the vehicle is tied to shore. 
 It is not of huge, immediate concern since I first want to simply collect a shallow underwater RGB dataset with the GoPro and 
-spend some time developing algorithms for supervised and unsupervised learning as novelty detection. 
-This brings us to the current stage of the project: integrating the underwater GoPro with a companion computer for onboard processing
+spend some time developing algorithms for supervised and unsupervised learning as well as novelty detection. 
+This leads to the current stage of the project: integrating the underwater GoPro with a companion computer for onboard processing
 and collecting GoPro video from the Laguna Madre. 
 
 ## Underwater GoPro Streaming - Lab
@@ -34,14 +34,14 @@ and collecting GoPro video from the Laguna Madre.
 [Last post](https://ekrell.github.io/laguna-madre-underwater-video/), I showed that I could submerge the GoPro from the side of my parent's fishing boat 
 and record footage with recognizable sand, seagrass, and shells. 
 However, since the boat's trolling motor was not working we could only navigate in the shallows by drifting until getting stuck.
-To acquire a variety of data, I will need to collect with either a the boat with repaired trolling motor, a kayak, or the EMILY itself. 
+To acquire a variety of data, I will need to collect with either a boat with trolling motor, kayak, or the EMILY itself. 
 The first is ideal since I would be able to easily navigate over a coverage area and build an image mosaic. 
 Using the EMILY requires confidence in the ArduRover integration, which I intend to work on in parallel with the algorithm development. 
 
 Since the GoPro seems suitable for shallow-water vision-based missions, the next step was to stream the footage to a computer.
 Using an onboard computer, the EMILY needs to process the underwater stream to make decisions. 
 The GoPro Hero 4 excels at obtaining cost-effective underwater imagery, but is not the ideal choice for delivering the footage to a computer.
-The choices are either WiFi or a HDMI capture card and waterproofed connection to the camera ([costly](https://www.diveandsee.com/products/monitors-and-gopro/gopro-hero-7-underwater-housing-wifi-remote-control-capability-%20hdmi-live-streaming-video-cable-led-video-light)). 
+The choices are either WiFi or HDMI capture card and waterproofed connection to the camera ([costly](https://www.diveandsee.com/products/monitors-and-gopro/gopro-hero-7-underwater-housing-wifi-remote-control-capability-%20hdmi-live-streaming-video-cable-led-video-light)). 
 
 WiFi does not generally effective underwater. In my trials, the connection is lost almost instantly on submersion. 
 However, I found [this extremely cheap technique](https://www.paulillsley.com/GoPro_Underwater_Wi-Fi_Cable_Setup/) by Paul Illsley to deliver the WiFi signal directly from the camera to the onboard computer
