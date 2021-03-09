@@ -7,15 +7,15 @@ category: GoPro, field, laguna madre, lab, vision
 ## EMILY Status
 
 A quick recap of the EMILY's status: it is more or less operational. 
-That is, the vehicle can follow waypoints using ArduRover and maintain a long-range radio connection to the GCS.
-The RC controller is another major range limitation, within ~20 feet, 
+That is, the vehicle can follow waypoints using [ArduRover](https://ardupilot.org/rover/) and maintain a long-range radio connection to the GCS.
+The RC controller is another major range limitation ( within ~20 feet) 
 but the current plan is to rely on a gamepad for manual control that communicates through the GCS. 
-Using the GCS middle-man for control is reported to come at the cost of latency, 
+Using the GCS middle-man for control is [reported to come at the cost of latency](https://ardupilot.org/rover/docs/common-joystick.html?highlight=gamepad), 
 but flying vehicles are by far the primary Ardu concern. 
 Given that the EMILY is going to act a slow-moving camera platform, it is expected (at least hoped) that the latency will be tolerable. 
 
 The remaining issue is that the GCS does not receive an accurate voltage reading, so I am forced to make very short missions
-to not risk depletion. The folks at Lonestar UAS have encountered this issue, and had success with a better power module. 
+to not risk depletion. The folks at [Lonestar UAS](https://lsuasc.tamucc.edu/) have encountered this issue, and had success with a better power module. 
 I've simply not yet performed the minor re-soldering needed. A more fundamental stumbling block is that almost every lagoon trial
 reveals some new issue. I have always been able to get a fix through a sequence of reboots, re-calibrations, barometric pressure calibrations... 
 but occasionally the fix has been to simply replace the Pixhawk Mini with another. 
