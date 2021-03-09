@@ -24,7 +24,7 @@ In fact, I seem to be swapping between three units that are somehow operational 
 Because of these reliability issues, I have been hesitant to perform any untethered missions. 
 Ultimately, the goal is to have an autonomous explorer using onboard sensing and processing for opportunistic, adaptive missions. 
 But that cannot happen as long as the vehicle is tied to shore. 
-It is not of huge, immediate concern since I first want to simply collect an shallow underwater RGB dataset with the GoPro and 
+It is not of huge, immediate concern since I first want to simply collect a shallow underwater RGB dataset with the GoPro and 
 spend some time developing algorithms for supervised and unsupervised learning as novelty detection. 
 This brings us to the current stage of the project: integrating the underwater GoPro with a companion computer for onboard processing
 and collecting GoPro video from the Laguna Madre. 
@@ -82,24 +82,24 @@ I am not sharing the lengthy recording since it almost entirely a green haze, bu
 
 My parents and their Carolina Skiff: 
 
-![Carolina Skiff](G0140215_e.JPG)
+![Carolina Skiff](../images/G0140215_e.JPG)
 
 Packery Channel:
 
-![Pelicans](G0170227_e.JPG)
+![Pelicans](../images/G0170227_e.JPG)
 
-![Shore](GOPR0201_e.JPG)
+![Shore](../images/GOPR0201_e.JPG)
 
-![Shore](GOPR0197_e.JPG)
+![Shore](../images/GOPR0197_e.JPG)
 
 Computing station:
 
-![Laptop and GoPro](G0270305_e.JPG)
+![Laptop and GoPro](../images/G0270305_e.JPG)
 
 Casualties of the Texas freeze: 
 
-![Several dead fish](GOPR0206_e.JPG)
+![Several dead fish](../images/GOPR0206_e.JPG)
 
-![Dead cowfish](G0130213_e.JPG)
+![Dead cowfish](../images/.JPG)
 
 And finally, a [video of a very simple scrambled eggs lunch](https://studio.youtube.com/video/LCfQwRSKnEo/edit).
