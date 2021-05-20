@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Among the rocks with a GoPro in Port Aransas
+title: Among the rocks in Port Aransas
 category: GoPro, field, port aransas
 ---
 
