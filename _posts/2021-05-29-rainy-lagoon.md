@@ -7,10 +7,8 @@ category: GoPro, field, laguna madre
 | ![Spoil island](../images/spoil_island.png) | 
 |:--:| 
 | [Spoil Island (link to higher res)](https://twitter.com/krell_evan/status/1398886366386298880) |
-| [Video of another spoil island](https://twitter.com/krell_evan/status/1398751184534581248) | 
-| |
 
-
+[Video of another spoil island](https://twitter.com/krell_evan/status/1398751184534581248)
 
 This morning's outing was delayed by unexpected stormy weather. We eventually set out from the marina at 1:30 pm instead of the planned 8:30 am. 
 Even then, we experienced moderate rain for the first half hour or so. This outing was primarily a fishing trip, 
