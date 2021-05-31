@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Laguna Madre: rainy & overcast
+title: Laguna Madre, rainy & overcast
 category: GoPro, field, laguna madre
 ---
 
