@@ -18,6 +18,8 @@ Two recording sequences were made, one in the morning (~9:30 AM) and another in 
 
 [Morning footage](https://www.youtube.com/watch?v=hMgJT-kqP-0)
 
+![Morning tracks](../images/LagunaMadre_20210616__morning.png)
+
 By noon, the wind increased slightly but with obvious impact on the water clarity. The turbidity was noticeable, but overall clear enough for distinguishing several distinct seagrasses and seaweeds. We recorded in the most shallow region so far. Here, the camera was among the grasses rather on above them. We also encountered several thick sargassum masses, halting our drift and forcing us to paddle. At one time, a bag flew out of the kayak and we had to maneuver to recover it. Thus, there are several moments where the footage becomes jerky and blurred due to paddling instead of drifting. 
 
 [Afternoon footage](https://www.youtube.com/watch?v=YB9ZufZUn_4)
