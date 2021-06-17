@@ -12,9 +12,9 @@ Given Sunday’s [high clarity recordings](https://ekrell.github.io/extreme-clar
 |:--:| 
 | GoPro Hero 4 and 9 mounted for underwater and above-water views |
 
-I made a slight modification to the GoPro setup. Before, the underwater GoPro Hero 4 was attached portside and the Hero 9 starboard. But I am very interested in comparing the view from each camera, so I positioned them on the same side with some overlap. I had to angle the above-water camera to avoid having the submerged camera take up too much of the view. The setup is currently a very crude zip-tie job (I know how to reuse zipties, so don’t comment about single-use plastics). 
+I made a slight modification to the GoPro setup. Before, the underwater GoPro Hero 4 was attached portside and the Hero 9 starboard. But I am very interested in comparing the view from each camera, so I positioned them on the same side with some overlap. I had to angle the above-water camera to avoid having the submerged camera take up too much of the view. The setup is currently a very crude zip-tie job (I know - single-use plastics - but I do [re-use them](https://www.instructables.com/How-to-Reuse-Zip-Ties-1/)). 
 
-Two recording sequences were made, one in the morning (~9:30 AM) and in the afternoon (~12:30 PM). The morning footage was obtained by deploying a drift anchor to capture steady, clear imagery as best as possible despite the very shallow water. Recall that, while shallow water is targeted because it can be seen from a surface vehicle, the motion blur can be substantial. 
+Two recording sequences were made, one in the morning (~9:30 AM) and another in the afternoon (~12:30 PM). The morning footage was obtained by deploying a drift anchor to capture steady, clear imagery as best as possible despite the very shallow water. Recall that, while shallow water is targeted because it can be seen from a surface vehicle, the motion blur can be substantial. 
 
 [Morning footage](https://www.youtube.com/watch?v=hMgJT-kqP-0)
 
@@ -22,6 +22,6 @@ By noon, the wind increased slightly but with obvious impact on the water clarit
 
 [Afternoon footage](https://www.youtube.com/watch?v=YB9ZufZUn_4)
 
-Where the increased, but still relatively low, wind speeds only slightly diminished the underwater film quality, the above-water footage was significantly worse than on Sunday. Below is a selection of screenshots that show sun glint and ripples 500severely obscuring the view of the surface. Unless I can mitigate this with hardware or software, I do not intend to keep recording the above-water view except in the calmest of conditions. Since Sunday, I have been developing ideas to take advantage of both above and below views for autonomy, but the lack of usable footage at ~11 mph is not very promising. The upside is that I can avoid processing, storing, and uploading two videos for every recording event. 
+Where the increased, but still relatively low, wind speeds only slightly diminished the underwater film quality, the above-water footage was significantly worse than on Sunday. Below is a selection of screenshots that show sun glint and ripples severely obscuring the view of the surface. Unless I can mitigate this with hardware or software, I do not intend to keep recording the above-water view except in the calmest of conditions. Since Sunday, I have been developing ideas to take advantage of both above and below views for autonomy, but the lack of usable footage at ~11 mph is not very promising. The upside is that I can avoid processing, storing, and uploading two videos for every recording event. 
 
 ![Drifting over the shallows](../images/kayak_overhead.png)
