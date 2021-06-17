@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Laguna Madre, extreme clarity
-category: GoPro, field, laguna madre
+category: GoPro, field, laguna madre, kayak
 ---
 
 Until now, I have recorded [several underwater GoPro videos](https://www.google.com/maps/d/u/0/edit?mid=1ikjTzJSn8ZHcMEG60Y72kDa2iIK9PM3i&ll=27.65407068056824%2C-97.18341999999998&z=11) all of which are plagued by turbidity to some degree. Even the [clearest](https://ekrell.github.io/rocks-port-aransas/) was only visible for the submerged GoPro. I myself could see very little detail wading around rocks just a few meters off the beach. However, I know from experience that there are days with extreme clarity where one can drift in a kayak for miles and make out individual fish, shells, seagrass species, prop scars, etc. These days are near-windless, sunny, and most prevalent in summer. It is quite possible for high-wind weeks to go by and suddenly becalm for a perfect flat-water day. Today was finally that day. 
