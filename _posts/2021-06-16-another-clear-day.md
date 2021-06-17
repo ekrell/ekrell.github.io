@@ -6,7 +6,7 @@ category: GoPro, field, laguna madre, kayak
 
 ![Drifting over the shallows](../images/GIF-210616_194248.gif)
 
-Given Sunday’s [successful data collection](https://ekrell.github.io/extreme-clarity/), we set out again while conditions remain favourable. Today was a little windier than the complete calm of Sunday. We have no onboard anemometer, but the weather report indicated ~11 mph. A subtle, but steady, ripple appeared on the water surface. It was still very easy to make out underwater details, at least for the shallows targeted by this project. 
+Given Sunday’s [high clarity recordings](https://ekrell.github.io/extreme-clarity/), we set out again while conditions remain favourable. Today was a little windier than the complete calm of Sunday. We have no onboard anemometer, but the weather report indicated ~11 mph. A subtle, but steady, ripple appeared on the water surface. It was still very easy to make out underwater details, at least for the shallows targeted by this project. 
 
 | ![Kayak GoPro setup](../images/kayak_gopro_setup.png) | 
 |:--:| 
