@@ -11,6 +11,7 @@ Given Sunday’s [successful data collection](https://ekrell.github.io/extreme-c
 | ![Kayak GoPro setup](../images/kayak_gopro_setup.png) | 
 |:--:| 
 | GoPro Hero 4 and 9 mounted for underwater and above-water views |
+
 I made a slight modification to the GoPro setup. Before, the underwater GoPro Hero 4 was attached portside and the Hero 9 starboard. But I am very interested in comparing the view from each camera, so I positioned them on the same side with some overlap. I had to angle the above-water camera to avoid having the submerged camera take up too much of the view. The setup is currently a very crude zip-tie job (I know how to reuse zipties, so don’t comment about single-use plastics). 
 
 Two recording sequences were made, one in the morning (~9:30 AM) and in the afternoon (~12:30 PM). The morning footage was obtained by deploying a drift anchor to capture steady, clear imagery as best as possible despite the very shallow water. Recall that, while shallow water is targeted because it can be seen from a surface vehicle, the motion blur can be substantial. 
