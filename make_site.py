@@ -1,4 +1,5 @@
 import os
+import pandas as pd
 
 def make_link(label, url, padding=0):
   pads = " "*padding
@@ -13,7 +14,7 @@ def make_page(template_html, content_url, replace_str="<!-- CONTENT -->"):
     # Open page's content
     with open(content_url) as file:
       content_html = file.read()
-    
+
     # Add content to template
     page_html = page_html.replace(replace_str, content_html)
   except:
@@ -30,11 +31,13 @@ def main():
   ###############
 
   PAGES = [
-    "about", "research", "teaching", 
+    "about", "research", "teaching",
     "publications", "photos", "misc",
   ]
 
   TEMPLATE = "content/template.html"
+
+  PHOTO_ALBUMS_FILE = "content/photo_directory.csv"
 
 
   ###################
@@ -46,8 +49,8 @@ def main():
     template_html = file.read()
   # Convert list of pages into urls
   urls_html = "".join([make_link(
-      page.capitalize(), 
-      page + ".html", 
+      page.capitalize(),
+      page + ".html",
       padding = 4) + "\n" for page in PAGES])
   # Add the urls to the template
   template_html = template_html.replace("<!-- LINKS -->", urls_html)
@@ -66,7 +69,56 @@ def main():
     with open("{}.html".format(page), "w") as file:
       file.write(page_html)
 
- 
+
+  #######################
+  # Create Photo Albums #
+  #######################
+
+  # Load photo albums
+  dfPhoto = pd.read_csv(PHOTO_ALBUMS_FILE)
+  dfPhoto.fillna('', inplace=True)
+
+  # Different album categories -> each a unique page
+  categories = dfPhoto["Category"].unique()
+  navlinks = "".join(['<td><a href="{}">{}</a></td>'.format("photos_" + cat + ".html", cat) for cat in categories])
+
+  # Create photos page
+  page = "photos"
+  page_html = make_page(template_html, "content/{}.partial.html".format(page))
+  # Create nav links
+  page_html = page_html.replace("<!-- ALBUM_NAV -->", navlinks)
+  # Write content
+  with open("{}.html".format(page), "w") as file:
+      file.write(page_html)
+
+  # Make each album page
+  for cat in categories:
+
+      page = "photos_{}".format(cat)
+
+      # Subset directory
+      dfCat = dfPhoto[dfPhoto["Category"] == cat]
+      rows = zip(dfCat["Trip"], dfCat["Date"], dfCat["Album"], dfCat["Link"])
+
+      # Init page
+      page_html = make_page(template_html, "content/photos_pages.partial.html")
+
+      # Create nav links
+      page_html = page_html.replace("<!-- ALBUM_NAV -->", navlinks)
+
+      # Create HTML table
+      albums = \
+              "".join(['<tr> <td class="tg-0lax">{}</td>  <td class="tg-0lax">{}</td> <td class="tg-0lax"><a href="{}">{}</a></td> </tr>'.format(
+            row[0], row[1], row[3], row[2]) for row in rows])
+
+      page_html = page_html.replace("<!-- ALBUM_TABLE -->", albums)
+
+
+      # Write content
+      with open("{}.html".format(page), "w") as file:
+          file.write(page_html)
+
+
 
 if __name__ == "__main__":
   main()
