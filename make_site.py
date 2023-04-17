@@ -77,7 +77,7 @@ def main():
 
   # Different album categories -> each a unique page
   categories = dfPhoto["Category"].unique()
-  navlinks = "".join(['<td><a href="{}">{}</a></td>'.format("photos_" + cat + ".html", cat) for cat in categories])
+  navlinks = "".join(['<div class="photo_nav_col"><a href="{}">{}</a></div>'.format("photos_" + cat + ".html", cat) for cat in categories])
 
   # Create photos page
   page = "photos"
