@@ -30,10 +30,7 @@ def main():
   # DEFINITIONS #
   ###############
 
-  PAGES = [
-    "about", "research", "teaching",
-    "publications", "photos", "misc",
-  ]
+  PAGES = ["about", "research", "publications", "photos", "misc"]
 
   TEMPLATE = "content/template.html"
 
