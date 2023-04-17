@@ -65,23 +65,14 @@
 
 .sidenav .email a {
   font-family: robot-light;
-  font-size: 10pt;
+  font-size: 9.5pt;
   color: #94c3fb;
 }
 
-.sidenav .social {
-  margin-left:15px;
-}
-
-.sidenav .social a {
-  float:left;
-  margin-top:-44px;
-  width: 44px;
-
-}
-
-.sidenav .social img {
-  opacity: 0.99;
+.social_col {
+  display: inline-block;
+  width: 20%;
+  margin: 0 auto;
 }
 
 /* When you mouse over the navigation links, change their color */
