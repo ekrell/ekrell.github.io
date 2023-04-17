@@ -106,10 +106,10 @@ def main():
       # Get rows where thumbnail is provided
       dfHighlights = dfCat[dfCat["Thumbnail"] != ""]
 
-      hrows = zip(dfHighlights["Date"],
-                  dfHighlights["Album"],
-                  dfHighlights["Link"],
-                  dfHighlights["Thumbnail"])
+      hrows = list(zip(dfHighlights["Date"],
+                       dfHighlights["Album"],
+                       dfHighlights["Link"],
+                       dfHighlights["Thumbnail"]))
 
       # A max of 4 highlights (uses first 4 found)
       hrows = hrows[:4]
