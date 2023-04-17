@@ -118,7 +118,7 @@ def main():
       highlights_html = ""
       for hrow in hrows:
         highlights_html += \
-              '<div class="div{}p"> <center> <a href={}> <img id="photo" src="{}"</img> </a> </center> <p id="photodate"> {} </p> <p id="photodesc"> {} </p></div>'.format(str(div_i), hrow[2], hrow[3], hrow[0], hrow[1])
+              '<div class="div{}p"> <a href={}> <img id="photo" src="{}"</img> </a> <p id="photodate"> {} </p> <p id="photodesc"> {} </p></div>'.format(str(div_i), hrow[2], hrow[3], hrow[0], hrow[1])
         div_i += 1
 
 
