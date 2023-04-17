@@ -98,20 +98,47 @@ def main():
 
       # Subset directory
       dfCat = dfPhoto[dfPhoto["Category"] == cat]
-      rows = zip(dfCat["Trip"], dfCat["Date"], dfCat["Album"], dfCat["Link"])
 
       # Init page
       page_html = make_page(template_html, "content/photos_pages.partial.html")
 
-      # Create nav links
+      # Populate HTML nav links
       page_html = page_html.replace("<!-- ALBUM_NAV -->", navlinks)
 
-      # Create HTML table
-      albums = \
+      # Populate highlights
+      # Get rows where thumbnail is provided
+      dfHighlights = dfCat[dfCat["Thumbnail"] != ""]
+
+      hrows = zip(dfHighlights["Date"],
+                  dfHighlights["Album"],
+                  dfHighlights["Link"],
+                  dfHighlights["Thumbnail"])
+
+      # A max of 4 highlights (uses first 4 found)
+      hrows = hrows[:4]
+
+      div_i = 2
+      highlights_html = ""
+      for hrow in hrows:
+        highlights_html += \
+              '<div class="div{}p"> <center> <a href={}> <img id="photo" src="{}"</img> </a> </center> <p id="photodate"> {} </p> <p id="photodesc"> {} </p></div>'.format(str(div_i), hrow[2], hrow[3], hrow[0], hrow[1])
+        div_i += 1
+
+
+      page_html = page_html.replace("<!-- HIGHLIGHTS -->", highlights_html)
+
+
+
+      # Populate HTML albums table
+      rows = zip(dfCat["Trip"],
+                 dfCat["Date"],
+                 dfCat["Album"],
+                 dfCat["Link"])
+      albums_html = \
               "".join(['<tr> <td class="tg-0lax">{}</td>  <td class="tg-0lax">{}</td> <td class="tg-0lax"><a href="{}">{}</a></td> </tr>'.format(
             row[0], row[1], row[3], row[2]) for row in rows])
 
-      page_html = page_html.replace("<!-- ALBUM_TABLE -->", albums)
+      page_html = page_html.replace("<!-- ALBUM_TABLE -->", albums_html)
 
 
       # Write content
