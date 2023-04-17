@@ -18,7 +18,7 @@ grid-column-gap: 8px;
 grid-row-gap: 8px;
 }
 
-.div1p { width:100%; grid-area: 1 / 1 / 2 / 3; }
+.div1p { grid-area: 1 / 1 / 2 / 3; }
 .div2p { grid-area: 2 / 1 / 3 / 2; }
 .div3p { grid-area: 2 / 2 / 3 / 3; }
 .div4p { grid-area: 2 / 3 / 3 / 4; }
