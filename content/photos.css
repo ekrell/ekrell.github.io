@@ -12,7 +12,7 @@
 }
 .parent {
 display: grid;
-grid-template-columns: repeat(5, 1fr);
+grid-template-columns: repeat(5, auto);
 grid-template-rows: repeat(5, auto);
 grid-column-gap: 8px;
 grid-row-gap: 8px;
@@ -41,6 +41,7 @@ grid-row-gap: 8px;
 }
 
 #photodate{
+  margin-top: 0px;
   font-family: roboto-light;
   font-size: 18px;
   color: white;
