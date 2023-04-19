@@ -30,12 +30,17 @@ def main():
   # DEFINITIONS #
   ###############
 
-  PAGES = ["about", "research", "publications", "photos", "misc"]
+  PAGES = {
+    "about"         : None,
+    "research"      : None,
+    "publications"  :  "https://scholar.google.com/citations?user=jLuwYGAAAAAJ&hl",
+    "photos"        : None,
+    "misc"          : None,
+  }
 
   TEMPLATE = "content/template.html"
 
   PHOTO_ALBUMS_FILE = "content/photo_directory.csv"
-
 
   ###################
   # Modify Template #
@@ -45,10 +50,18 @@ def main():
   with open(TEMPLATE, "r") as file:
     template_html = file.read()
   # Convert list of pages into urls
-  urls_html = "".join([make_link(
-      page.capitalize(),
-      page + ".html",
-      padding = 4) + "\n" for page in PAGES])
+
+  urls_html = ""
+  for page in PAGES.keys():
+    # Generate url from page name
+    if PAGES[page] is None:
+      url  = page + ".html"
+    # Use external url
+    else:
+      url = PAGES[page]
+    # Create HTML link
+    urls_html += make_link(page.capitalize(), url, padding = 4)
+
   # Add the urls to the template
   template_html = template_html.replace("<!-- LINKS -->", urls_html)
 
@@ -56,16 +69,29 @@ def main():
   # Create Pages #
   ################
 
-  PAGES = PAGES + ["index"]
+  # Make Index page
+  page_html = make_page(template_html, "content/{}.partial.html".format("index"))
+  # Write content
+  with open("index.html", "w") as file:
+    file.write(page_html)
 
-  # Make all pages
-  for page in PAGES:
-    # Make content
-    page_html = make_page(template_html, "content/{}.partial.html".format(page))
-    # Write content
-    with open("{}.html".format(page), "w") as file:
-      file.write(page_html)
+  # Make About page
+  page_html = make_page(template_html, "content/{}.partial.html".format("about"))
+  # Write content
+  with open("about.html", "w") as file:
+    file.write(page_html)
+  
+  # Make Research page
+  page_html = make_page(template_html, "content/{}.partial.html".format("research"))
+  # Write content
+  with open("research.html", "w") as file:
+    file.write(page_html)
 
+  # Make Misc page
+  page_html = make_page(template_html, "content/{}.partial.html".format("misc"))
+  # Write content
+  with open("misc.html", "w") as file:
+    file.write(page_html)
 
   #######################
   # Create Photo Albums #
