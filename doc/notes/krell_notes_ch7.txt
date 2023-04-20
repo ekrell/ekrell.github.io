@@ -1,0 +1,384 @@
+## Database Systems:
+###Design, Implementation, and Management
+
+####Chapter 7: Intro to SQL
+
+* SQL functions fit into 2 broad categories
+   - Data definition language
+      - SQL includes commands to 
+         - Create database objects such as tables, indexes, and views
+         - Define access rights to those objects
+      - Data manipulation langiage
+         - Includes commands to insert, update, delete, and retrieve data within tables
+   - SQL is relatively easy to learn
+   - Basic command set has vocabulary of less than 100 words
+   - Nonprocedural languages
+   - ANSI prescribes a standard SQL, but several dialects exist
+
+* Data Definition Commands
+   - CREATE SCHEMA AUTHORIZATION
+      - Creates a database schema
+   - CREATE TABLE
+      - NOT NULL
+      - UNIQUE
+      - PRIMARY KEY
+      - FOREIGN KEY
+      - DEFAULT: Defines a default value to be used for a column when none is given
+      - CHECK: Constraint used to validate data in an attribute
+   - CREATE INDEX
+   - CREATE VIEW
+   - DROP TABLE
+   - DROP INDEX
+   - DROP VIEW
+   
+* Data Manipulation Commands
+   - INSERT
+   - SELECT
+      - WHERE: Restricts the selection of rows based on a conditional expression
+      - GROUP BY: Groups the selected rows based on one or more attributes
+      - HAVING: Restricts the selection of grouped rows based on a condition
+      - ORDER BY: Orders the selected rows based on one or more attributes
+   - UPDATE
+   - DELETE
+   - COMMIT: Permanently saves data changes
+   - ROLLBACK: Restores data to last commit
+   
+   - Comparison Operators
+      - =, <, >, <=, >=, <>   Used in conditional expressions
+   - Logical Operators
+      - AND, OR, NOT
+   - Special Operators
+      - BETWEEN: Check whether an attribute value is within a range
+      - IS NULL: Check whether an attribute value is null
+      - LIKE: Check whether an attribute value matches a given string pattern
+      - EXISTS: Check whether a subquery returns any rows
+      - DISTINCT: Limits values to unique rows
+   - Aggregate Functions
+      - COUNT
+      - MIN
+      - MAX
+      - SUM
+      - AVG
+
+* Creating the Database
+   - Following tasks must be completed:
+      - Create database structure
+         - RDBMS creates physical files that will hold database
+         - Tends to differ substantially from one RDBMS to another
+      - Create tables that will hold end-user data
+
+* The Database Schema
+   - Authentication
+      - Process through which DBMS verifies that only registered users are able to access database
+   - Schema
+      - Group of database objects, such as tables and indexes, that are related to each other
+
+* Data Types
+   - Type selection is usally dictated by nature of data and intended use
+   - Pay close attention to expected use of attributes for sorting and data retrieval purposes
+   
+   - Numeric(L,D)
+      - Numbers will be stored with D decimal places and may be up to L-1 digits long (due to zero-based)
+   - CHAR(L)
+     - Fixed-length character data for up to 255 characters. If you supply less than L number of characters,
+         the extra space will remain unused (but still taking up space)
+   - VARCHAR2(L)
+      - Variable-length character data, will not leave unused spaces.
+   - DATE
+      - Stores dates in Julian data format
+
+* Create a Table Structure
+
+   CREATE TABLE CUSTOMER(
+      cus_code NUMBER(7) PRIMARY KEY,
+      cus_lname VARCHAR2(20),
+      cus_zip CHAR(5),
+      agent_code NUMBER(3) DEFAULT 412);
+
+   CREATE TABLE AGENT(
+      agent_code NUMBER(3) PRIMARY KEY,
+      agent_phone CHAR(10) );
+
+   CREATE TABLE EMPLOYEE(
+      emp_ssn CHAR(10) PRIMARY KEY,
+      emp_salary NUMBER(9,2),
+      emp_title VARCHAR(20),
+      emp_class NUMBER(1) CONSTRAINT class_ck CHECK
+         (emp_class BETWEEN 1 AND 4)
+      CONSTRAINT emp_title_uk UNIQUE (emp_title) );
+
+
+* SQL Indexes
+   - When primary key is declared, DBMS automatically creates unique index
+   - Often need additional indexes
+   - Using CREATE INDEX command, SQL indexe can be created on basis of any selected attribute
+   - Composite index
+      - Index based on 2+ attributes
+      - Often used to prevent data duplication
+
+* Data Manipulation Commands
+
+   - Insert
+      - Used to enter data into table
+      - Insert a row each time
+      - When entering values, notice that: 
+         - Row contents are entered between parantheses
+         - Character and date values are entered between apastrophes
+         - Numerical entries are not enclosed in apostrophes
+         - Attribute entries are separated by commas
+         - A values is required for each column
+      - Use NULL for unknown values
+
+      INSERT INTO PRODUCT VALUES ('BRT-345', 'Titanium drill bit', 
+         TO_DATE('18-Oct-05','DD-MM-YY'), 75, 10, 4.5, 0.06, NULL );
+
+   - Select
+      - Used to list contents of a table
+
+      SELECT p_code, p_descript, p_indate, p_min, p_price
+      FROM PRODUCT;
+
+      SELECT * 
+      FROM PRODUCT;
+
+   - Update
+
+      UPDATE PRODUCT
+      SET p_price = 7.6, p_min = 12
+      WHERE p_code = '13-Q2/P2';
+
+   - Delete
+      
+      DELETE FROM PRODUCT
+      WHERE p-code = 'BRT-345';
+
+* Inserting Table Rows with a Select Subquery
+   - Insert multiple rows from another table (source)
+   - Uses SELECT subquery
+      - Query that is emebedded (nested) inside another query
+      - Executed first
+
+   INSERT INTO EMP1
+      SELECT emp_address, emp_salary, emp_num
+      FROM EMPLOYEE;
+
+   - Use the values of one table to populate another
+
+* Selecting rows with Conditional Restrictions
+   - Selected partial table contents by placing additional restrictions on rows to be included in output
+   - SELECT, FROM, WHERE
+
+   SELECT p_descript, p_indate, p_price, v_code
+   FROM PRODUCT
+   WHERE v_code = 123134
+
+   - Can use conditional operators such as <, >, <>, AND, OR, ..
+
+   SELECT * 
+   FROM PRODUCT
+   WHERE p_price BETWEEN 50.00 AND 100.00;
+
+   SELECT *
+   FROM PRODUCT
+   WHERE p_price > 50.00 AND p_price < 100.00;
+
+   SELECT *
+   FROM PRODUCT
+   WHERE v_code IS NULL;
+
+   - The LIKE special operator is used in conjunction with wildcards to find
+      patterns within string attributes
+
+      - % means any and all following are eligible
+         - 'J%' includes John, July, Jones
+         - 'Jo%' includes John, Jones
+      - _ means any one character make be substituted for the underscore.
+         - '_o_nes' includes Jones, Cones, Cokes, totes
+
+   SELECT v_name, v_contact, v_areacode
+   FROM VENDOR
+   WHERE v_contact NOT LIKE 'Smith%';
+
+   SELECT *
+   FROM PRODUCT
+   WHERE v_code IN (1234, 12388);
+
+   SELECT v_code, v_name
+   FROM VENDOR
+   WHERE v_code IN (SELECT v_code FROM PRODUCT)
+
+   SELECT *
+   FROM VENDOR
+   WHERE v_code EXIST (SELECT * FROM PRODUCT WHERE p_qoh <= p_min);
+
+* Advanced Select Queries
+   - SQL provides useful functions such as COUNT, MIN, MAX, and AVG
+   - SQL allows user to limit queries to only those who entries have no duplicates or 
+      entries whose duplicates may be grouped
+
+   SELECT emp_num, emp_salary, emp_address, emp_title
+   FROM EMPLOYEE
+   ORDER BY emp_title, emp_num;
+
+   SELECT p_descript, v_code, p_indate, p_price
+   FROM PRODUCT
+   WHERE p_indate < '21-Jan-2006' AND p_price <= 50.00
+   ORDER BY v_code. p_price DESC;
+
+   SELECT COUNT( DISTINCT v_code )
+   FROM PRODUCT;
+
+   SELECT COUNT( DISTINCT v_code )
+   FROM PRODUCT
+   WHERE p_price <= 10.00;
+
+   SELECT COUNT(*)
+   FROM PRODUCT
+   WHERE p_price <= 10.00
+
+   SELECT MAX(p_price)
+   FROM PRODUCT;
+
+   SELECT MIN(p_price)
+   FROM PRODUCT;
+
+   SELECT p_code, p_descript, p_price
+   FROM PRODUCT
+   WHERE p_price = (SELECT MAX(P_PRICE) FROM PRODUCT;
+
+   SELECT sum(cus_balance) as totbalance from CUSTOMER;
+
+   SELECT SUM(p_qoh*p_price) as totvalue
+   FROM PRODUCT;
+
+   SELECT AVG(p_price) FROM PRODUCT;
+
+   SELECT p_code, p_descript, p_qoh, p_price, v_code
+   FROM PRODUCT
+   WHERE p_price > (SELECT AVG(p_price) FROM PRODUCT)
+   ORDER BY p_price DESC;
+
+   SELECT p_salecode, MIN(p_price)
+   FROM PRODUCT
+   GROUP BY p_salecode;
+
+   SELECT p_salecode, AVG( p_price )
+   FROM PRODUCT
+   GROUP BY p_salecode;
+
+   SELECT v_code, COUNT( DISTINCT (p_code) )
+   FROM PRODUCT
+   GROUP BY v_code;
+
+   SELECT v_code, COUNT( DISTINCT (p_code)), AVG(p_price)
+   FROM PRODUCT
+   GROUP BY v_code;
+
+   SELECT v_code, COUNT( DISTINCT(p_code)), AVG(p_price)
+   FROM PRODUCT
+   GROUP BY v_code
+   HAVING AVG(p_price) < 10;
+
+* Joining Database Tables
+   - Ability to combine (join) tables on common attributes is the most important distinction between 
+      relational and other databases
+   - Join is performed when data are retreived from more than one table at a time
+   - Join is generally composed of an equality comparison between foreign key and primary key of related tables
+
+   Select p_descript, p_price, v_name, v_contact
+   FROM PRODUCT, VENDOR
+   WHERE PRODUCT.v_code = VENDOR.v_code
+
+   Select p_descript, p_price, v_name, v_contact
+   FROM PRODUCT, VENDOR
+   WHERE PRODUCT.v_code = VENDOR.v_code AND p_indate > '15-Jan-2006';
+
+
+###Exercises
+
+STUDENT( stu_number, stu_name )
+         ^PK
+
+GRADE_REPORT( stu_number, course_number, course_grade )
+               ^FK
+
+* List the names of students who have earned A's or B's in any course
+
+   SELECT stu_name
+   FROM STUDENT, GRADE_REPORT
+   WHERE (STUDENT.stu_number = GRADE_REPORT.stu_number) AND ( course_grade = 'A' OR course_grade = 'B' );
+
+* List the names and grades of students who have earned A's or B's in any course
+
+   SELECT stu_name
+   FROM STUDENT, GRADE_REPORT
+   WHERE (STUDENT.stu_number = GRADE_REPORT.stu_number) AND ( course_grade = 'A' OR course_grade = 'B' );
+
+
+
+COURSE( course_number, course_creditHours, course_name, dept_code )
+         ^FK
+
+DEPARTMENT( dept_code, dept_name )
+            ^PK
+
+* Find the names of all departments that offer a course with 'INTRO' in the title
+
+   SELECT dept_name
+   FROM COURSE, DEPARTMENT
+   WHERE ( COURSE.dept_code = DEPARTMENT.dept_code ) AND ( UPPER( DEPARTMENT.dept_name) LIKE '%INTRO%' );
+
+
+STUDENT( stu_num, stu_num, stu_major, stu_class )
+         ^PK
+
+GRADE_REPORT( stu_num, section_id, grade_grade )
+               ^FK      ^FK
+
+SECTION( section_id, section_semester, section_year, section_room, section_professor )
+         ^PK
+
+   
+* List the student name, student major code, and section ID of students who earned C's in courses 
+   taught by Professor Johns (JOHNS)
+
+   SELECT stu_name, stu_major, section_id 
+   FROM STUDENT, GRADE_REPORT, SECTION 
+   WHERE ( (STUDENT.stu_num = GRADE_REPORT.stu_num ) AND ( SECTION.section_id = GRADE_REPORT.section_id ) )
+      AND GRADE_REPORT.grade_grade = 'C' AND UPPER( SECTION.section_professor ) = 'JOHNS' );
+
+
+ROOM( room_id, room_capacity )
+
+* List all rooms that have a below average capacity
+
+   SELECT room_id
+   FROM ROOM
+   WHERE room_capacity < ( SELECT AVG(room_capacity) FROM ROOM );
+
+
+SAILORS(S_ID, S_NAME, S_RATING, S_AGE)
+BOATS(B_ID, B_NAME, B_COLOR)
+RESERVES(S_ID, B_ID, R_DAY)
+
+* Find all sailors with a rating above 7
+
+SELECT S_ID, S_NAME
+FROM SAILORS
+WHERE S_RATING > 7;
+
+* Find the name of sailors who have reserved a red or a green boat
+
+SELECT S_ID, S_NAME
+FROM SAILORS, BOATS, RESERVES
+WHERE ( (SAILORS.S_ID = RESERVES.S_ID) AND (RESERVES.B_ID = BOATS.B_ID) )
+   AND ( upper(BOATS.B_COLOR) = "RED" OR upper(BOATS.B_COLOR) = "GREEN" ) 
+
+* Find the name of sailors who are older than the oldes sailors with a rating of ten
+
+SELECT S_NAME
+FROM SAILORS
+WHERE S_AGE > (SELECT MAX(S_AGE) FROM SAILORS)
+GROUP BY S_RATING
+HAVING S_RATING = 10;
+

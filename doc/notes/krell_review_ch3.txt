@@ -1,0 +1,291 @@
+##Database
+###Chapter 3 Review
+
+The practical significance of taking the logical view of a database is that is serves
+as a remider of the simple file concept of data storage
+
+You can think of a table as a persistent representation of a logical relation
+
+Because the relational model uses attribute values to establish relationships among tables,
+many database users INCORRECTLY assume that the term "relation" refers to such relationships.
+
+The order of the rows and columns is immaterial to the DBMS.
+
+Numeric data are data on which you can perform meaningful arithmetic procedures.
+
+Character data CANNOT contain any character or symbol intended for mathematical manipulation.
+
+Each table in a relational database must have a primary key.
+
+A proper understanding of the concept and use of keys in a relational database is very important.
+
+If A determines B, C, D; you can write "A -> (B, C, D)".
+
+Functional dependence refers to the value of one or more attribute determining the value of
+one or more other attribute.
+
+If the attribute (B) is functionally dependent on a composite key (A) but not on any subset of that
+composite key, the attribute (B) is fully functionally dependent on (A).
+
+A null is created when you press the enter or tab key to move to the next entry without making
+a prior entry of any kind.
+
+Nulls should be avoided when possible, but are needed at times.
+
+A null can potentially create problems for the functions COUNT, AVERAGE, and SUM.
+
+Tables within a database share common attributes that enable the tables to be linked together.
+
+"A foreign key must existin in both tables that have a relationship" is an attempt to trick the reader,
+because it is a foreign key in one table and a prime key in the other.
+
+All RDBMSs do NOT enforce integrity rules automatically.
+
+Referential integrity refers to the condition in which every reference to an entity instance by
+another entity instance is valid. (No Foreign Keys that don't have a matching prime key).
+Entity integrity is the condition in which each row (entity instance) in the table has its own 
+unique identiy. Primary key must be unique, and no primary key subcomponents may be null.
+
+Tables must have the same attribute characteristics (columns, domains are identical) to be eligible
+for a UNION.
+
+The DIFFERENCE operator subtracts one table from the other (leaving dissimilar rows).
+
+The SELECT operator yields a horizontal subset of a table (as it selects by row).
+
+In a natural join, the column on which the join was made occurs only once in the new table,
+but appears twice in the equijoin. 
+
+A left outer join on tables CUSTOMER and AGENT yields all the rows of the CUSTOMER table, including
+those that do not have matching values in the AGENT table. 
+
+The DIVIDE operation uses one single-column table (i.e. column "a") as the divisor and one 
+two-column table ("a" and "b") as the dividend. 
+
+A data dictionary contains metadata: data about data.
+
+A data dictionary is sometimes described as "the database designer's database" because it 
+records the design decisions about tables and their structures.
+
+Current relational database software typically provides on a system catalog (and not a data dictionary).
+
+The 1:M relationship is easily implemented in the relational model by putting the foreign key in the "many"
+side, and a primary key in the "1" side.
+
+As rare as 1:1 relationships are, certain conditions absolutely require their use.
+
+DBMSs use indexes for many different purposes. 
+
+Predicate logic, used extensively in mathematics, provides a framework in which an assertaion (statement
+of fact) can be verified as either true or false.
+
+The relational database model enables you to view data logically, rather than physically.
+
+The relational model's creator, E. F. Codd, used the term relation as a synonym for "table".
+
+A table is percieved as a 2D structure composed of rows and columns.
+
+Date attributes contain calendar dates stored in the Julian format.
+
+Logical data can only have a true or false condition.
+
+In the relational model, keys are important because they ensure that each table row
+in uniquely identifiable. 
+
+In the context of a database table, the statement "A determines B" indicates that if you know the
+value of A, you can look up the value of B.
+
+The attribute B is functionally dependent on A if each value in column A determines 1 and only
+1 value in column B. 
+
+Any attribute that is part of a key is known as a key attribute.
+
+If the attribute B is functionally dependent on a composite key A, but not on 
+any subset of that composite key, then the attribute B is fully functionally dependent on A.
+
+A superkey is any key that uniquely identifies a row.
+
+No data entry at all is known as a NULL. 
+
+Controlled redundancy makes a relational database work.
+
+A relational schema is a textual representation of the database tables where each table
+is listed by its name, followed by the list of its attributes in parantheses. 
+
+In the following table description, PROD_CODE is the primary key:
+   PRODUCT( PROD_CODE, PROD_DESCRIPTION, PROD_PRICE, VEND_CODE )
+
+Referential integrity means that if the foreign key contains a value, that value refers to 
+an existing valid tuple in another relation. 
+
+A secondary key is defined strictly for data retrieval.
+
+A candidate key is a minimal (irreducible) superkey.
+
+All primary key entries are unique, and no part of a primary key may be null.
+
+A CUSTOMER table's primary key is CUS_CODE. The CUSTOMER primary key column has no null entries,
+and all entries are unique. This is an example of entity integrity. 
+
+The NOT NULL constraint can be placed on a column to ensure that every row in the table has a value
+for that column. 
+
+To be considered minimally relational, the DBMS must support the key relational operators
+SELECT, PROJECT, and JOIN. 
+
+UNION combines all rows from 2 tables, excluding duplicate rows. 
+
+INTERSECT yields only the rows that appear in both tables.
+
+SELECT, also known as RESTRICT, yields values for all rows found in a table that
+satisfy a given condition. 
+
+PROJECT yields a vertical subset of a table.
+
+A natural join links tables by selecting only the rows with common values in their common attributes.
+
+The equijoin takes its name from the comparison operator, =, used in the condition.
+
+In an outer join, the matched pairs would be retained and any unmatched values in the other table
+would be left null. 
+
+A data dictionary contains at least all of the attribute names and characteristics for each
+table in the system. 
+
+The system catalog is actually a system-created database whose tables store the user/designer-
+created database characteristics and contents. 
+
+In a database context, the word "homonym" indicates the use of the same name to label 
+different attributes.
+
+In a adatabase context, the word "synonym" indicates the use of different names to describe
+the same attribute.
+
+1:M is the "relational ideal".
+
+1:1 should be rare in design. 
+
+Since it is used to link the tables that originally were related in a M:N relationship,
+the composite entity structure includes -as foreign keys- at least the primary keys of
+the table are to be linked. 
+
+An index is an ordered arrangement of keys and pointers. 
+
+When you define a table's primary key, the DBMS automatically creates a unique index
+on the primary key columns you declared. 
+
+Codd's rule of Logical Data Independence states: Application programs and ad hoc facilities 
+are largely unaffected when changes are made to the table structures that preserve the original 
+table values (changing order of column or inserting columns).
+
+The logical view of the relational database is facilitated by the creation of data relationships 
+based on a logical constuct known as a relation. 
+
+In a relational table, each column has a specific range of values known as the attribute domain. 
+
+In the relational model, keys are important because they are used to ensure that each row in a 
+table is uniquely identifiable.
+
+Attribute A determines attribute B (that is, B is functially dependent on A) if all the rows in
+the table agree that in value for attribute A also agree in value for attribute B. 
+
+A candidate key can be described as a superkey without any unnecessary attributes. 
+
+If the foreign key contains either matching values or nulls, the table that makes use of the foreign
+key is said to exhibit referential integrity. 
+
+The following example exhibits entity integrity:
+The CUSTOMER table’s primary key is CUS_CODE. The CUSTOMER primary key column has no null entries, 
+and all entries are unique. Similarly, the AGENT table’s primary key is AGENT_CODE, 
+and this primary key column also is free of null entries.
+
+TO avoid nulls, some designers use special codes, known as flags, to indicate absense of some value.
+
+The relational operators have the property of closure; that is, the use of relational algebra
+operators on existing tables (relations) produces new relations.
+
+PRODUCT yields all possible pairs of rows from two tables- also known as the Cartesian product. 
+
+JOIN is the real power behind the relational database, allowing the use of independent tables
+linked by common attributes.
+
+An equijoin links tables on the basis of an equality condition that compares specified columns
+of each table. 
+
+Outer joins are especially useful when you are trying to determine what values in related
+tables cause referential integrity problems. 
+
+A data dictionary provides a detailed description of all tables found within the user/designer-
+created database. 
+
+The system catalog can be described as a detailed system data dictionary that describes 
+all objects within the database, including data about table names, the table’s creator and creation date, 
+the number of columns in each table, the data type corresponding to each column, index filenames, 
+index creators, authorized users, and access privileges.
+
+The 1:M relationship is the relational database norm.
+
+If one department chair—a professor—can chair only one department and one department can have only one 
+department chair, then the entities PROFESSOR and DEPARTMENT exhibit a 1:1 relationship.
+
+M:N relationships can be implemented by creating a new entity in 1:M relationships with 
+the original entities. 
+
+Fortunately, the problems inherent in the M:N relationship can be easily avoided by
+creating a composite entity. 
+
+The proper use of foreign keys is crucial to controlling data redundancy.
+
+Proper data warehousing design requires carefully defined and controlled data redundancies to 
+function properly.
+
+An index is an orderly arrangement used to logically access rows in a table. 
+
+A unique index is an index in which the index key can have only one pointer value (row)
+associated with it. 
+
+The index key can have multiple attributes, this is called a composite index.
+
+Codd's rule of guaranteed access states that every value in a table is guaranteed to be accessable 
+through a combination of tabel name, primary key value, and column name. 
+
+What are the characteristics of a relational table?
+
+   A table is percieved as a 2D structure composed of rows and columns.
+   Each row (tuple) represents a single entity occurence within the entity set.
+   Each table column represents an attribute, and each column has a distinct name. 
+   Each row/column intersection represents a single data value. 
+   All values in a column must conform to the same data format.
+   
+
+
+What is a key and why is it important in the relational model?
+
+   In the relational model, keys are important because they are used to ensure that
+   each row in a table is uniquely identifiable. They are also used to establish relationships 
+   among tables and to ensure the integrity of the data. Therefore, a proper understanding of the 
+   concept and use of keys in the relational model is very important. A key consists of one or more
+   attributes that determine other attributes. For example, an invoice number identifies all of the
+   invoice attributes, such as the date and customer name. 
+
+
+Describe the use of nulls in a database.
+
+   Nulls can never be part of a primary key, and they should be avoided to the greatest
+   extent possible in all attributes. There are rare cases where they are completely unavoidable,
+   but minimizing the existence of nulls is a reflection of sophisticated database design.
+
+
+Describe the use of the UNION operator.
+
+   UNION combines all rows from 2 tables, excluding duplicate rows. The tables must have the same 
+   attributes and attribute domains. When 2 or more tables share the same number of columns, with the
+   same column names, and domains, they are said to be union-compatible. 
+
+
+What is the system catalog?
+
+   Like the data dictionary, the system catalogue contains metadata. It can be described as a 
+   detailed system data dictionary that descibes all objects within the database, including data 
+   about the table names, table's creator, creation date, etc. Most systems only contain the system
+   catalogue, and not the full data dictionary. 

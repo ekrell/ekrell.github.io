@@ -34,8 +34,8 @@ def main():
     ("about"        , None),
     ("research"     , None),
     ("publications" , "https://scholar.google.com/citations?user=jLuwYGAAAAAJ&hl"),
+    ("resources"    , None),
     ("photos"       , None),
-    ("misc"         , None),
   ]
 
   TEMPLATE = "content/template.html"
@@ -88,9 +88,9 @@ def main():
     file.write(page_html)
 
   # Make Misc page
-  page_html = make_page(template_html, "content/{}.partial.html".format("misc"))
+  page_html = make_page(template_html, "content/{}.partial.html".format("resources"))
   # Write content
-  with open("misc.html", "w") as file:
+  with open("resources.html", "w") as file:
     file.write(page_html)
 
   #######################

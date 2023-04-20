@@ -1,0 +1,166 @@
+##Database Systems
+
+###Chapter 3: The Relational Database Model
+
+* Objectives
+- In this chapter, you will learn: 
+   - That the relational database model offers a logical view of data
+   - About the relational model's basic component: relations 
+   - That relations are logical constructs composed of rows (tuples) and columns (attributes)
+   - That relations are implemented as tables in a relational DBMS
+   - About relational database operators, the data dictionary, and the system catalog
+   - How data redundancy is handled in the relational database model
+   - Why indexing is important
+
+* A Logical View of Data
+- Relational model 
+   - View data logically than physically
+- Table
+   - Structural and data independence
+   - Resembles a file conceptually
+- Relational database model easier to understand than hierarchical and network models
+- Logical view of relational database based on relation
+   - Relational thought of as a table
+- Table: 2D structure composed of rows and columns
+   - Persistent representation of logical relation
+   - Each table column represent an attribute, and each column has a distinct name
+   - Each row (tuple) represents a single entity occurence within the set
+   - All values in a column mist conform to the same data format
+   - Each column has a specific range of values known as the attribute domain
+   - The order of the rows and columsn is immaterial to the DBMS
+   - Each table must have an attribute or a combination of attributes that uniquely identifies each row
+- Contains group of related entities = and entity set
+
+* Keys
+- Each row in a table must be uniquely identifiable
+- Key is one or more attributes that determine other attributes that determine other attributes
+- Key's role is based on determination
+   - If you know the value of attribute A, you can determine the value of attribute B
+- Functional independence
+   - Attribute B is functionally dependent on A if all rows in the table that agree in value for A also agree in value for B
+
+      EX: Student Classification
+
+         [hours completed]    [classification]
+         less than 30         Fr
+         30 - 59              So
+         60 - 89              Jr
+         90+                  Sr
+
+         To learn the student's classification (B), you need to know the hours completed (A)
+
+- Composite key: Composed of more than one attribute
+- Key attribute: any attribute that is part of a key
+- Superkey: any key that uniquely identifies each row
+- Candidate key: a superkey without unnecessary attribute
+- Nulls
+   - No data entry
+   - Not permitted in primary key
+   - Should be avoided in other attributes
+   - Can represent: 
+      - An unknown attribute value
+      - A known, but missing, attribute value
+      - A 'not applicable' condition
+      - Can create problems when such functions as COUNT, AVERAGE, and SUM are used
+      - Can create logical problems when the relational tables are linked
+- Controlled redundancy
+   - Makes the relational database work 
+   - Tables within the database share common attributes
+      - Enables tables to be linked together
+   - Multiple occurences of values not redundant when required to make the relationship work
+   - Redundancy only exists where there is unnecessary duplication of attributes values
+- Foreign Key (FK): an attribute whose value matched primary key values in the related table
+- Referential integrity: FK contains a value that always refers to a valid row in the related table's PK
+- Secondary key: Used strictly for data retrieval purposes
+
+* Integrity Rules
+- Many RDBMs enforce integrity rules automatically
+- Safer to ensure application design conforms to entity and referential integrity rules
+- Designers use flags to avoid nulls
+   - Flags indicate the absense of some value (e.g., '-1' or '-0')
+
+* Relational Set Operators
+- Relational algebra
+   - Defines theoretical way of manipulating table contents using relational operators
+   - Use of relational algebra operators on existing relations produces new relations
+   - UNION
+      - Combines 2 tables into one, besides duplicates;
+         - The tables must have the same attribute (columns)
+   - INTERSECT
+      - Show the similar rows between tables
+   - DIFFERENCE
+      - Show the dissimilar rows between tables
+   - PRODUCT
+      - Multiplied tables; very expensive operation
+   - SELECT
+      - Filter specific entities
+   - PROJECT
+      - Filter specific attributes
+- Natural Join
+   - Links tables by selecting only rows and columns with common values in their common attributes
+   - Result of a 3-step process:
+      - PRODUCT of the tables is created
+      - SELECT is performed on Step 1 output to yield only the rows for which the AGENT_CODE 
+         values are equal
+         - Common columns are called join columns
+      - PROJECT is perfomed on Step 2 results to yield a single copy of each attribute, 
+         eliminating duplicate columns
+      - Final outcome yields table that:
+         - Does not include unmatched pairs
+         - Provides only copies of matches
+      - If not match is made between the table rows
+         - The new table does not include the unmatched row
+- Equijoin
+   - Goes up to Step 2 of the natural join
+- Theta join
+   - Any other comparison operator is used
+- Outer join 
+   - Matched pairs retained and any unmatched values in other table left null
+   - left and right varieties
+
+* The Data Dictionary and System Catalog
+- Data dictionary
+   - Provides detailed accounting of all tables found within the user/designer-created database
+   - Contains (at least) all the attribute names and characteristics of each table in the system
+   - Contains metadata: data about data
+- System catalog
+   - Contains metadata
+   - Detailed system data dictionary that described all objects within the database
+
+* Relationships within the Relational Database
+- 1:M relationship
+   - Relational modeling ideal
+   - Should be the norm in any relational database design 
+- 1:1 relationship
+   - Should be rare in ant relational database design
+   - One entity related to only one other entity, and vise versa
+   - Sometimes means that entity components were not defined properly
+   - Could indicate that 2 enitities actually belong in the same table
+   - Certain conditions absolutely require their use
+- M:N relationships
+   - Cannot be implemented as such in the relational model
+   - Can be changed into 2 1:M relationships 
+   - Implemented by breaking it up to produce a set of 1:M relationships
+   - Avoid problems inherent to M:N relationship by creating a composite entity
+   - Involves the creation of a 'bridge' table
+   - Instead of "many students have several classes"; you have:
+      - "many students have a single enrollment" & "a single enrollment lists many classes"
+
+* Data redundancy revisited
+- Data redundancy leads to data anomalies
+   - Such anomalies can destroy the effectiveness of the database
+- Foreign keys:
+   - Control data redundancies by using common attributes shared by tables
+   - Crucial to exercising data redundancy control
+- Sometimes, data redundancy is necessary
+
+* Indexes
+- Orderly arrangement to logically access rows in a table
+   - Index key
+      - Index's reference point
+      - Points to data location identified by the key
+   - Unique index
+      - Index in which the index key can have only one pointer value (row) associated with it
+   - Each index is associated with only one table
+
+      

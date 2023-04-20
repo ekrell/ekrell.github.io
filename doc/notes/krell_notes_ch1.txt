@@ -1,0 +1,233 @@
+## Database Systems:
+###Design, Implementation, and Management
+
+####Chapter 1: Database Systems
+
+* objectives
+- The difference between data and information
+- What a database is
+- Various types of databases
+- Why they are valuable assets for decision making
+- Importance of database design
+- How modern databases evolved from file systems
+- Flaws in file system data management
+- Main components of database system
+- Main functions of database management system (DBMS)
+
+* Introduction
+- Good decisions require good information derived from raw facts
+- Data managed most efficiently when stored in a database
+- Databases evolved from computer file systems
+
+* Data Versus Information
+- Data are raw facts
+- Information is the result of processing data to reveal meaning
+- Information requires context to reveal meaning
+- Raw data must be formatted for storage, processing, and presentation
+- Data are the foundation of information, which is the bedrock of knowlegde
+- Data: building blocks of information
+- Information produced by processing data
+- Information used to reveal meaning in data
+- Accurate, relevant, timely information is the key to good decision making
+- Good decision making in the key to organizational survival
+
+* The Database and the DBMS
+- Database: shared, integrated computer structure that stores a collection of data
+   -- End-user data: raw facts of intereset to the end user
+   -- Metadata: data about data
+- Metadata provides description of data charactertistics and relationships in data
+   - Complements and expands the value of data
+- Database management systems (DBMS): collection of programs that manage structure
+   control access to data
+
+* ROle and Advantages of the DBMS
+- DBMS is the intermediary between the user and the database
+- Database structure stored as file collection
+- Access database through the DBMS
+- DBMS enables data to be shared
+- DBMS integrates many user's views of the data
+- Advantages of a DBMS:
+   - Improved data sharing
+   - Improved data security
+   - Better data integration
+   - Minimized data inconsistency
+   - Improved decision making
+   - Increased end-user productivity
+
+* Types of Databases
+- Databases can be classified according to:
+   - Number of users
+   - Database locations
+   - Expected type and extent of use
+- Single-user database: 
+   - Supports only one user at a time
+   - Desktop database: single user, runs on PC
+- Multiuser database
+   - Suports multiple users
+   - Workgroup database supports a small number
+   - Enterprise data supports a large number
+- Centralized database: data stored at a single site
+- Distributed database: data distributed across several different sites
+- Operational database: supports a companie's day-to-day operations
+- Data Warehouse: Stores data used for tactical or strategic decisions
+- Unstructured data exist in their original state
+- Structured data result from formatting 
+   - Structure applied based on the type of processing to be performed
+- Semistructured data have been processed to some extent
+- XML database supports semistructured XML data
+
+* Why database design is important
+- Database design focuses on design of database structure used for end-user data
+   - Designers must identify database's expected use
+- Well-designed database:
+   - Facilitates data management
+   - Generates accurate and valuable information
+- Poorly designed database
+   - Caused difficult-to-trace errors
+
+* Historical Roots: Files and File Systems
+- Reasons for studying file systems:
+   - Complexity of database design easier to understand
+   - Understanding file system problems helps to avoid problems with DBMS systems
+   - Knowledge of file system useful for converting file systems to database system
+- File systems typically composed of collection of folders, each tagged and kept in cabinet
+- Contents of each file folder logically related
+- Manual system served as a data repository for small data collections
+   -- Cumbersome for large collections
+- Data Processing (DP) Specialist converted computer file structure from manual system
+   - Wrote software that managed the data
+   - Designed the applications programs
+- Initially, computer file systems resembled manual systems
+- As number of files increased, file systems evolved
+   - Each files used its own application program to store, retrieve, and modify data
+   - Each file owned by individual or department that commissioned its creation
+
+* Problems with File System Data Management
+- An improvement over manual systems
+   - File systems used for over 2 decades
+   - Understanding the shortcomings of file systems aids in development of modern databases
+   - Many problems not unique to file systems
+- Even simple file system retrieval task required extensive programming
+   - Ad hoc queries impossible
+   - Changing existing structure difficult
+- Security features difficult to program
+
+* Structural and Data Dependence
+- Stuctural dependence: access to a file depends on its own structure
+   - All file system programs must be modified to conform the the new file structure
+- Structural independence: change file structure without accecting data access
+- Data dependence: data access changes when data storage characteristics change
+- Data independence: data storage characteristics do not affect data storage
+- Practical significance of data dependence is difference between logical and physical format
+   - Logical data format: how humans view the data
+   - Phyisical data format: how computer must work with the data
+- Each program must contain:
+   - Lines specifying opening of specific file type
+   - Record specification
+   - Field definitions
+
+* Field Definitions and Naming COnventions
+- Storing customer name as a single field is a liability
+   - Better record definition breaks fields into component parts
+- Selecting proper field names important, field names are descriptive
+   - With proper naming conventions, file structure becomes self-documenting
+   - Some software places restrictions on the length of field names
+- Each record should have a unique identifier
+
+* Data Redundancy
+- File system structure makes it difficult to combine data from multiple sources
+- Organizational structure promotes storage of same data in different locations
+   - islands of information
+- Data stored in different locations unlikely to be updated consistently 
+- The result is data redundancy: same data store unnecessarily in different places
+- Data inconsistency: different and conflicting versions of same data occur at different places
+- Data anomalies: abnormalities when all changes in redundant data are not made correctly:
+   - Update anomalies
+   - Insertion anomalies
+   - Deletion anomalies
+
+* Database Systems
+- Database system consists of logically related data stored in a single logical data repository
+   - May be physically distributed among multiple stored facilities
+- DBMS eliminates most the file system's problems
+- Current generation stores data structures, relationships between structures, access paths
+   - Takes care of defining, storing, and managing all access paths and components
+
+* The Database System Environment
+- Database system: defines and regulates the collection, storage, management, and use of data
+- Five major parts of a database system:
+   - Hardware
+      - All the systems physical devices 
+   - Software, People, Procedures, Data
+      - OS
+      - DBMS 
+      - Application programs and utility software
+   - People
+      - All users of the database software
+      - System and Database admins
+      - Database designers
+      - Systems analysts and programmers
+      - End users
+   - Procedures
+      - Instructions and rules that govern the design and use of the database system
+   - Data
+      - The collection of facts stored in the database
+
+* DBMS Functions
+- Most functions transparent to end users
+   -Can only be achieved through the DBMS
+- Data dictionary management
+   - DBMS stores definitions of data elements and relationships (metadata) in the data dictionary
+   - DBMS looks up required data components structures and relationships
+   - Changes are automatically recorded in the dictionary
+   - DBMS provides data abstraction, removes structural and data dependency
+- Data storage management
+   - DBMS creates and manages complex structures required for data storage
+   - Also stores related data entry forms, screen definitions, report definitions, etc
+- Performance tuning
+   - Activities that make the database perform more efficiently
+   - DBMS stores the database in multiple physical data files
+- Data transformation and presentation
+   - DBMS transforms data entered to conform to required data structures
+   - DBMS transforms physically retrieved data to conform to user's logical expectations
+- Security management
+   - DBMS creates a security system that enforces user security and data privacy
+   - Security rules determine which users can access the database, which items can be accessed, etc
+- Multiuser access control
+   - DBMS uses sophisticated algorithms to ensure consurrent access does not affect integrity
+- Backup and recovery management
+   - DBMS provides backup and data recovery to ensure data safety and integrity
+   - Recovery management deals with recovery of database after a failure 
+      - Critical to preserving database's integrity
+- Data integrity management
+   - DBMS promotes and enforces integrity rules
+      - Minimized redundancy
+      - Maximizes consistency 
+   - Data relationships stored in data dictionary used to enforce data integrity
+   - Integrity especially important in transaction-oriented database systems
+- Database access languages and application programming interfaces
+   - DBMS provides access through a query language
+   - Query language is a nonprocedural language
+   - Structured Query Language (SQL) is the de facto query languae
+      - Standard supported by majority of DBMS vendors
+- Database communication interfaces
+   - Current DBMSs accept end-use requests via multiple different network environments
+   - Communication accomplished in several ways
+      - End-users generate answers to queries by filling in screen forms through web browser
+      - DBMS automatically publishes predefined reports on a web site
+      - DBMS connects to 3rd party system to distribute information via email
+
+* Managing the Database System: A shift in focus
+- Database system provides a framework in which strict procedures and standards are enforced
+   - ROle of human changes from programming to managin organization's resources
+- Database system enables more sophisticated use of the data
+- Data stuctures created within the database and their relationships determine effectiveness
+- Disadvantages of database systems:
+   - Increased costs
+   - Management complexity
+   - Maintaining concurrency
+   - Vendor dependence
+   - Frequent upgrade/replacement cycles
+
+
+

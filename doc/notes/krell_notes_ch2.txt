@@ -1,0 +1,148 @@
+##Database Systems
+###Design, Implementation, and Management
+
+###Chapter 2: Data Models
+
+* Objectives
+   - Aboout data modelling and why data models are important
+   - About the basic data-modeling building blocks
+   - What business rules are how they influence database design
+   - How the major data models evolved
+   - How data models can be classified by level of abstraction
+
+* Introduction
+   - Designers, programmers, and end users see data in different ways
+   - Different views of same data leads to designs that to not reflect organization's operation
+   - Data modeling reduces complexities of database design
+   - Various degrees of data abstraction help reconcile varying views of same data
+
+* Data Modeling and Data Models
+- Data models
+   - Relatively simple representations of complex real-world data structures
+      - Often graphical
+   - Model: an abstraction of a real-world object or event
+      - Useful in understanding complexities of the real-world environment
+   - Data modeling is iterative and progressive
+
+* The Importance of Data Models
+   - Facilitate interaction among the designer, the application programmer, and the end user
+   - End users have different views and needs for data
+   - Data model organizes data for various users
+   - Data model is an abstraction
+      - Cannot draw required data out of the data model
+
+* Data Model Building Blocks
+   - Entity: anything about which data are to be collected and stored
+   - Attribute: a characteristic of an entity
+   - Relationship: describes and associate among entities
+   - Constraint: a restriction placed on the data
+
+* Business Rules
+   - Descriptions of policies, procedures, or principles within a specific organization
+      - Apply to any organization that stores and uses data to generate information
+   - Description of operations to create/enforce actions within an organization's environment
+   - Must be in writing and kept up to date
+   - Describes characteristics of data as viewed by the company
+
+* Discovering Business Rules
+   - Sources of business rules:
+      - Company managers
+      - Policy makers
+      - Written documentation
+         - Procedures
+         - Standards
+         - Operations manuals
+      - Direct interview with end users
+   - Standardize company's view of data
+   - Communications tool between users and designers
+   - Allow designers to understand the nature, role, and scope of data
+   - Allow designer to understand business processes
+   - Allow designer to develop appropriate relationship participation rules and constraints
+
+* Translating Business Rules into Data Model Components
+   - Generally, nouns translate to entities
+   - Verbs translate into relationships among entities
+   - Relationships are bidirectional
+   - Two questions to identify the relationship type:
+      - How many instances of B are related to one instance of A?
+      - How many instances of A are related to one instance of B?
+
+* The Relational Model
+   - Developed by E.F. Codd (IBM) in 1970
+   - Table (relations)
+      - Matrix consisting of row/column intersections
+      - Each row in a relation called a tuple
+      - Relational models considered impractical in 1970
+         - Model was conceptually simple, but at the expense of computer overhead
+   - Relational Data Management System (RDBMS)
+      - Performs same functions provided by hierarchical model
+      - Hides complexity from the user
+   - Relational diagram
+      - Representation of entities, attributes, and relationships
+   - Relational table stores collection of related entries
+      - (Called "relational" because of the related entities, not because of relationship among tables)
+
+* Entity Relationship Model
+   - Widely accepted standard for data modeling 
+   - Introduced by Chen in 1976
+   - Graphical representation of entities and their relationships in a database structure 
+   - Entity relationship diagram (ERD)
+      - Uses graphic representations to model database components
+      - Entity is mapped to the relational table
+   - Entity instance (or occurence) is a row in the table
+   - Entity set is a collection of like entities
+   - Connectivity labels types of relationships
+   - Relationships expressed using Chen notation
+      - Relationships representated by a diamond
+      - Relationship name written inside the diamond
+   - Crows's Foot notation used as design standard in this book
+
+* Data Models: A Summary
+   - Common characteristics:
+      - Conceptual simplicity with semantic completeness
+      - Represent the real world as closely as possible
+      - Real-world transformations must comply with consistency and integrity characteristics
+   - Each new data model capitalized on the shortcomings of previous models
+   - Some models better suited for some tasks
+
+* Degrees of Data Abstraction
+   - Database designer starts with abstracted view, then adds details
+   - ANSI Standards
+      - Defined a framework for data modeling based on degrees of data abstraction (1970s)
+         - External, Conceptual, Internal
+
+* External Model
+   - End user's view of the data environment
+   - ER diagrams represent external views
+   - External schema: specific representation of an external view
+      - Entities, Relationships, Processes, Constraints
+   - Easy to identify specific data required to support each business unit's operations
+   - Facilitates designer's job by providing feedback about the model's adequacy
+   - Ensures security constraints in database design
+   - Simplifies application program development
+
+* Conceptual Model
+   - Represents global view of the entire database
+   - All external views integrated into single global view: conceptual schema
+   - ER model most widely used
+   - ERD graphically represents the conceptual schema
+   - Provides a relatively easily understood macro level view of data environment
+   - Independent of both software and hardwarwe
+      - Does not depend on the DBMS software used to implement the model
+      - Does not depend on the hardware used in the implementation of the model
+      - Changes in hardware or software do not affect the database design at the conceptual level
+
+* Internal Model
+   - Representation of the database as "seen by" the DBMS
+      - Maps the conceptual model to the DBMS
+   - Internal schema depicts a specific representation of an internal model
+   - Depends on specific database software
+   - Logical independence: change internal model without affecting conceptual model
+
+* Physical Model
+   - Operates at the lowest level of abstraction 
+      - Describes the way data are saved on storage media such as disks or tapes
+   - Requires the definition of physical storage and data access methods
+   - Relational model aimed at logical level; does not require physical-level details
+   - Physical independence: change physical model without affecting internal model
+
