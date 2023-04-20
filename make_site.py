@@ -30,13 +30,13 @@ def main():
   # DEFINITIONS #
   ###############
 
-  PAGES = {
-    "about"         : None,
-    "research"      : None,
-    "publications"  :  "https://scholar.google.com/citations?user=jLuwYGAAAAAJ&hl",
-    "photos"        : None,
-    "misc"          : None,
-  }
+  PAGES = [
+    ("about"        , None),
+    ("research"     , None),
+    ("publications" , "https://scholar.google.com/citations?user=jLuwYGAAAAAJ&hl"),
+    ("photos"       , None),
+    ("misc"         , None),
+  ]
 
   TEMPLATE = "content/template.html"
 
@@ -52,15 +52,15 @@ def main():
   # Convert list of pages into urls
 
   urls_html = ""
-  for page in PAGES.keys():
+  for page in PAGES:
     # Generate url from page name
-    if PAGES[page] is None:
-      url  = page + ".html"
+    if page[1] is None:
+      url  = page[0] + ".html"
     # Use external url
     else:
-      url = PAGES[page]
+      url = page[1]
     # Create HTML link
-    urls_html += make_link(page.capitalize(), url, padding = 4)
+    urls_html += make_link(page[0].capitalize(), url, padding = 4)
 
   # Add the urls to the template
   template_html = template_html.replace("<!-- LINKS -->", urls_html)
@@ -80,7 +80,7 @@ def main():
   # Write content
   with open("about.html", "w") as file:
     file.write(page_html)
-  
+
   # Make Research page
   page_html = make_page(template_html, "content/{}.partial.html".format("research"))
   # Write content
