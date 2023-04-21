@@ -65,6 +65,7 @@ def main():
   # Add the urls to the template
   template_html = template_html.replace("<!-- LINKS -->", urls_html)
 
+
   ################
   # Create Pages #
   ################
@@ -84,11 +85,52 @@ def main():
   # Make Research page
   page_html = make_page(template_html, "content/{}.partial.html".format("research"))
   # Write content
-  with open("research.html", "w") as file:
+  with open("resources.html", "w") as file:
     file.write(page_html)
 
-  # Make Misc page
+  # Make resources page
   page_html = make_page(template_html, "content/{}.partial.html".format("resources"))
+  # Load resources table
+  dfRes = pd.read_csv("content/resources.csv")
+  # Resource categories
+  res_cats = dfRes["Category"].unique()
+  # Add items of each resource category
+  res_html = ""
+  for cat in res_cats:
+    dfCat = dfRes[dfRes["Category"] == cat]
+    res_html += "<h1>{}</h1>\n".format(cat.capitalize())
+    # Init table
+    res_html += "<style type='text/css'> \
+                 .tg  {border-collapse:collapse;border-spacing:0; width:100%;}" \
+                 ".tg td{border-color:black;border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px" \
+                 "overflow:hidden;padding:10px 5px;word-break:normal;}" \
+                 ".tg th{text-decoration:underline;border-color:black;border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;" \
+                 ".tg .tg-0lax{color:white;font-family:'Arial Black';text-align:left;vertical-align:top}" \
+                 "</style>"
+    res_html += "<table class='tg'><tbody>"
+    # Add table rows
+    for index, row in dfCat.iterrows():
+        # Parse links
+        link_content = ""
+        links = row["Links"].split(" | ")
+        for link in links:
+            if link[0] == "[":
+              link_ = link.replace("[", "").replace(")", "").split("](")
+              link_ = "<a href={}>{}</a>".format(link_[1], link_[0])
+              link = link_
+        link_content += link_ + ","
+        link_content = link_content[:-1]
+
+        res_html += "<tr><td>{}</td><td>{}</td><td>{}</td>".format(
+            row["Title"], row["Description"], link_content)
+
+
+    # Finish table
+    res_html += "</tbody></table>"
+
+
+  # Add content
+  page_html = page_html.replace("<!-- RESOURCE CONTENT -->", res_html)
   # Write content
   with open("resources.html", "w") as file:
     file.write(page_html)
@@ -147,10 +189,7 @@ def main():
               '<div class="div{}p"> <a href={}> <img id="photo" src="{}"</img> </a> <p id="photodate"> {} </p> <p id="photodesc"> {} </p></div>'.format(str(div_i), hrow[2], hrow[3], hrow[0], hrow[1])
         div_i += 1
 
-
       page_html = page_html.replace("<!-- HIGHLIGHTS -->", highlights_html)
-
-
 
       # Populate HTML albums table
       rows = zip(dfCat["Trip"],
@@ -162,7 +201,6 @@ def main():
             row[0], row[1], row[3], row[2]) for row in rows])
 
       page_html = page_html.replace("<!-- ALBUM_TABLE -->", albums_html)
-
 
       # Write content
       with open("{}.html".format(page), "w") as file:
