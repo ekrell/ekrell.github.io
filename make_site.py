@@ -85,7 +85,7 @@ def main():
   # Make Research page
   page_html = make_page(template_html, "content/{}.partial.html".format("research"))
   # Write content
-  with open("resources.html", "w") as file:
+  with open("research.html", "w") as file:
     file.write(page_html)
 
   # Make resources page
