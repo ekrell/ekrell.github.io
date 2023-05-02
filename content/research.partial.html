@@ -49,7 +49,7 @@ Kamangir, H., Krell, E., Collins, W., King, S. A., & Tissot, P.
 </br>
 Environmental Modelling & Software, 154, 105424.
   </p>
-</div>
+  </div>
 
 <h3>Presentations</h3>
 
@@ -109,14 +109,123 @@ Environmental Modelling & Software, 154, 105424.
 
 <h2>Energy Efficient Path Planning for Autonomous Surface Vessels</h2>
 
-<h3>COMING SOON</h3>
+<p>Typical robot path planning is based on optimizing the path to achieve that with the shortest distance. For a robot boat, however, the influence of the environment (water currents, waves, etc) may be of much greater concern. In this research, we explore multiple approaches to path planning for an autonomous surface vessel when taking into consideration ocean current forecasts. These approaches include metaheuristic algorithms and game-theoretic techniques.</p>
+
+<img width="500px;" src="img/media/graphic_pathplanning.png"></img>
+
+<h3>Publications</h3>
+
+<div class="item">
+  <p>
+    <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjDnf6Zj9f-AhWulWoFHdWMDG0QFnoECBMQAQ&url=https%3A%2F%2Fwww.sciencedirect.com%2Fscience%2Farticle%2Fpii%2FS0141118722000748&usg=AOvVaw2rfjoUn3Eu_c6nDRI76O7h"> 
+  (2022) Autonomous surface vehicle energy-efficient and reward-based path planning using particle swarm optimization and visibility graphs
+    </a>
+    </br>
+      Krell, E., King, S. A., & Carrillo, L. R. G. 
+    </br>
+      Applied Ocean Research 122 (2022): 103125.
+  </p>
+</div>
+
+
+<div class="item">
+  <p>
+    <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj887z_j9f-AhVDnGoFHeACB84QFnoECAoQAQ&url=https%3A%2F%2Fieeexplore.ieee.org%2Fdocument%2F9147292&usg=AOvVaw03-1bAiwo9eEHoiJ447BMR"> 
+     (2020) Game Theoretic Potential Field for Autonomous Water Surface Vehicle Navigation Using Weather Forecasts
+    </a>
+    </br>
+       Krell, E., Carrillo, L. R. G., King, S. A., & Hespanha, J. P.
+    </br>
+      2020 American Control Conference (ACC).
+  </p>
+</div>
+
+<div class="item">
+  <p>
+    <a href="https://ieeexplore.ieee.org/iel7/9140048/9147203/09148034.pdf?casa_token=DmNfJtMC8lEAAAAA:7jxQ1sK_TO-mURu2Uu7Xj5EnaUt_8DjapjZ5VqVIPH-gC3eH73fsGQV4Hzg11l2YXuc5io6tkZGqH08"> 
+      (2020) Autonomous Water Surface Vehicle Metaheuristic Mission Planning using Self-generated Goals and Environmental Forecasts
+    </a>
+    </br>
+       Krell, E., King, S. A., & Carrillo, L. R. G.
+    </br>
+      2020 American Control Conference (ACC).
+  </p>
+</div>
+
+<h3>Repositories</h3>
+
+<div class="item">
+  <p>
+    <a href="https://github.com/ekrell/conch"> 
+      conch
+    </a>
+    </br>
+Path planning software for using A*, Dijkstra, and several metahueristic algorithms (including particle swarm optimization and genetic algorithm). There is an option to supply the planner with a raster containing water current forecasts that can be used for energy-efficient planning in the marine environment. 
+  </p>
+</div>
+
+
+<div class="item">
+  <p>
+    <a href="https://github.com/ekrell/fujin"> 
+      fujin
+    </a>
+    </br>
+Another path planning software that incorporates water currents for energy efficient planning, but based on game theory. The optimization problem is modeled by treating the robot and environment as a zero-sum game where the robot wants to minimize energy consumption and the environment wants to maximize. This assumption leads to conservative motion planning. However, the code is slow for higher resolution environments since it does not use any kind of sampling (e.g. markov decision making) to solve the Bellman equation.  
+  </p>
+</div>
+
+<div class="item">
+  <p>
+    <a href="https://github.com/ekrell/whelk"> 
+      whelk
+    </a>
+    </br>
+This repo has examples of extracting information from NetCDF water models (e.g. NECOFS, NGOFS) and storing them as a set of rasters. The water current rasters can be used as input to the conch and fujin path planners. 
+  </p>
+</div>
+
+<div class="item">
+  <p>
+    <a href="https://github.com/ekrell/nir2watermap"> 
+      nir2watermap
+    </a>
+    </br>
+A very simple piece of code for converting NIR imagery into an occupancy grid for marine robot planning. Every grid cell is converted to either water or non-water. Because it relies on aerial imagery, bridges are detected as non-water, which can create a fictional obstacle for the robot boat since it could of course travel below the bridge.
+  </p>
+</div>
+
+
+<h3>Presentations</h3>
+
+<div class="item">
+  <p>
+  <a href="https://youtu.be/Njlyf1SfgP0">2020 American Control Conference (ACC)</a>
+  </br>
+  Game Theoretic Potential Field for Autonomous Water Surface Vehicle Navigation Using Weather Forecasts.
+  </br>
+  Krell, E., Carrillo, L. R. G., King, S. A., & Hespanha, J. P.
+  </br>
+  <a href="doc/slides_acc2022_gtpp.pdf">Slides</a>
+  </p>
+</div>
 
 <h2>Machine Learning Pipeline for Detection and Prediction of PyroCbs</h2>
 
-<h3>COMING SOON</h3>
+<p>
+Under favorable atmospheric conditions, intense heat from a large and hot wildfire can generate deep, smoke-infused storms resembling conventional thunderstorms that are known as pyrocumulonimbus (pyroCb). PyroCbs are capable of releasing a large quantity of smoke particles into the lower stratosphere, often above the tropopause as well as above jet aircraft cruising altitudes by several kilometers. PyroCbs can be accompanied by strong and erratic inflow, potentially dangerous downbursts, and lightning strikes. These extreme events can increase fire spread rates and intensity, cause sudden changes in fire spread directions, and ignite additional fires. These storms are especially dangerous for fire fighters and others involved in disaster response. In this research, we have developed a machine learning system for understanding and detecting the atmospheric potential of wildfires in producing proCb as Wildfire–driven Thunderstorms. This is challenging because pyroCbs are extreme events: there are ~500 incidents during the 2013 – 2021 period. Machine learning typically struggles to learn from relatively few examples and highly imbalanced datasets. Our pipeline involves fusing input data sources to assemble a training dataset, applying feature selection and data balancing techniques, and training with several machine learning algorithms. Finally, we perform initial eXplainable AI (XAI) experiments to analyze learned model strategies.
+</p>
 
-<h2>Autonomous Exploration using an Autonomous Surface Vessel</h2>
+<h3>Presentations</h3>
 
-<h3>COMING SOON</h3>
+<div class="item">
+  <p>
+  <a href="https://ams.confex.com/ams/103ANNUAL/meetingapp.cgi/Paper/416833">American Meteorological Society (AMS) 2023 Annual Meeting</a>
+  </br>
+Development of a Machine Learning System for Detecting the Atmospheric Potential of Wildfire-driven Thunderstorms.
+  </br>
+Krell, E., Nguyen, C., Nachamkin, J., Peterson, D., Hyer, E., King, S. A., Tissot, P., Estrada, B., Tory, K. J., & Campbell, J. 
+  </p>
+</div>
 
 </div>
