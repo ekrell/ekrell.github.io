@@ -7,7 +7,6 @@ training,Linux for Researchers,A collection of helpful hints for researchers rel
 training,TAI4ES Summer School,"I led a session about XAI methods applied to explain FogNet, a 3D CNN for coastal fog prediction.",[Course materials](https://docs.google.com/document/d/1HVvBR_8DoHxRvUUYKL31LskK1tIjo2sByEEnTINyYEA/edit)
 training,Mobile Robot Path Planning,A presentation on path planning techniques. ,[Slides](doc/path_planning_lecture.ppt)
 training,Efficient Wireless Sensor Networks,A presentation on efficient algorithms for WSNs. ,[Slides](doc/efficient_wsn_lecture.ppt)
-training,COSC 2465 - Linux Systems,I taught the Linux systems course in Spring 2019.,Coming soon.
 repositories,FogNet,A 3D CNN for coastal fog prediction.,[code](https://gridftp.tamucc.edu/fognet/)
 repositories,SparkMet,A transformer-based architecture (and data processing tools) for geoscience models. ,[code](https://github.com/conrad-blucher-institute/SparkMET)
 repositories,conch,Path planning for autonomous surface vehicles that uses water current forecasts for efficient routes.,[code](https://github.com/ekrell/conch)
@@ -17,5 +16,4 @@ repositories,Dynamic Programming Path Planner,Implementation of dynammic program
 repositories,fujin,An energy-efficient path planner based on game theory for surface vessels. Plans an optimal route based on water current forecasts.,[code](https://github.com/ekrell/fujin)
 repositories,nir2watermap,Uses the NIR channel in aerial images to convert each pixel to water or land. ,[code](https://github.com/ekrell/nir2watermap)
 repositories,EMILY USV configs,Configurations for an EMILY USV that has been modified for autonomous control using Pixhawk.,[code](https://github.com/ekrell/emily-usv)
-repositories,PyroCB Detection Pipeline,A machine learning pipeline for detecting pyroCbs based on satellite and atmospheric model data. ,Not released for public.
 cooking,Evan’s Asian Food Adventures,I really like Asian food. ,[Workbook](https://docs.google.com/spreadsheets/d/16e8qlFGzBlES_rVrJSoNqr7A9uvRbt4vxuWYtjOjYPA/edit?usp=sharing)
