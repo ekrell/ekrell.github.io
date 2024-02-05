@@ -16,4 +16,5 @@ repositories,Dynamic Programming Path Planner,Implementation of dynammic program
 repositories,fujin,An energy-efficient path planner based on game theory for surface vessels. Plans an optimal route based on water current forecasts.,[code](https://github.com/ekrell/fujin)
 repositories,nir2watermap,Uses the NIR channel in aerial images to convert each pixel to water or land. ,[code](https://github.com/ekrell/nir2watermap)
 repositories,EMILY USV configs,Configurations for an EMILY USV that has been modified for autonomous control using Pixhawk.,[code](https://github.com/ekrell/emily-usv)
+repositories,AMS 2024 ML Short Course,"Machine Learning in Python for Environmental Science Problems (Baltimore, MD)",[code](https://github.com/ekrell/ams_ai_shortcourse_2024)
 cooking,Evan’s Asian Food Adventures,I really like Asian food. ,[Workbook](https://docs.google.com/spreadsheets/d/16e8qlFGzBlES_rVrJSoNqr7A9uvRbt4vxuWYtjOjYPA/edit?usp=sharing)
